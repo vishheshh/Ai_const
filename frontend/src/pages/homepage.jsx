@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import CasteCard from "../CasteCard";
 import ReligionCard from "../ReligionCard";
 import PersonCard from "../PersonCard";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
