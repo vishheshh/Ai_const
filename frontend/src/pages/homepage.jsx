@@ -11,9 +11,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 function Homepage() {
   const navigate = useNavigate();
-    const imageRef = useRef(null);
-    const textRef = useRef(null);
-    const textContainerRef = useRef(null);
+  const imageRef = useRef(null);
+  const textRef = useRef(null);
+  const textContainerRef = useRef(null);
   const castes = [
     {
       id: 1,
@@ -437,6 +437,332 @@ function Homepage() {
     },
   ];
 
+  const muslimcastes = [
+    {
+      id: 1,
+      name: "Ansari",
+      photo: "images/muslim-caste-images/Ansari.png",
+      description: "Ansari",
+    },
+    {
+      id: 2,
+      name: "Attar",
+      photo: "images/muslim-caste-images/Attar.png",
+      description: "Attar",
+    },
+    {
+      id: 3,
+      name: "Bhangi",
+      photo: "images/muslim-caste-images/Bhangi.png",
+      description: "Bhangi",
+    },
+    {
+      id: 4,
+      name: "Chishti",
+      photo: "images/muslim-caste-images/Chishti.png",
+      description: "Chishti",
+    },
+    {
+      id: 5,
+      name: "Faqir",
+      photo: "images/muslim-caste-images/Faqir.png",
+      description: "Faqir",
+    },
+    {
+      id: 6,
+      name: "Garadi",
+      photo: "images/muslim-caste-images/Garadi.png",
+      description: "Garadi",
+    },
+    {
+      id: 7,
+      name: "Idrisi",
+      photo: "images/muslim-caste-images/Idrisi.png",
+      description: "Idrisi",
+    },
+    {
+      id: 8,
+      name: "Kalal",
+      photo: "images/muslim-caste-images/Kalal.png",
+      description: "Kalal",
+    },
+    {
+      id: 9,
+      name: "Mansoori",
+      photo: "images/muslim-caste-images/Mansoori.png",
+      description: "Mansoori",
+    },
+    {
+      id: 10,
+      name: "Mirza",
+      photo: "images/muslim-caste-images/Mirza.png",
+      description: "Mirza",
+    },
+    {
+      id: 11,
+      name: "Mughal",
+      photo: "images/muslim-caste-images/Mughal.png",
+      description: "Mughal",
+    },
+    {
+      id: 12,
+      name: "Pathan",
+      photo: "images/muslim-caste-images/Pathan.png",
+      description: "Pathan",
+    },
+    {
+      id: 13,
+      name: "Pirzada",
+      photo: "images/muslim-caste-images/Pirzada.png",
+      description: "Pirzada",
+    },
+    {
+      id: 14,
+      name: "Qureshi",
+      photo: "images/muslim-caste-images/Qureshi.png",
+      description: "Qureshi",
+    },
+    {
+      id: 15,
+      name: "Salmani",
+      photo: "images/muslim-caste-images/Salmani.png",
+      description: "Salmani",
+    },
+    {
+      id: 16,
+      name: "Sheikh",
+      photo: "images/muslim-caste-images/Sheikh.png",
+      description: "Sheikh",
+    },
+    {
+      id: 17,
+      name: "Siddi",
+      photo: "images/muslim-caste-images/Siddi.png",
+      description: "Siddi",
+    },
+    {
+      id: 18,
+      name: "Syed",
+      photo: "images/muslim-caste-images/Syed.png",
+      description: "Syed",
+    },
+  ];
+
+
+  const jaincastes = [
+    {
+      id: 1,
+      name: "Agrawal",
+      photo: "images/jain-caste-images/agrawal.png",
+      description: "Agrawal",
+    },
+    {
+      id: 2,
+      name: "Balija",
+      photo: "images/jain-caste-images/balija.png",
+      description: "Balija",
+    },
+    {
+      id: 3,
+      name: "Fasli",
+      photo: "images/jain-caste-images/fasli.png",
+      description: "Fasli",
+    },
+    {
+      id: 4,
+      name: "Kadmi",
+      photo: "images/jain-caste-images/kadmi.png",
+      description: "Kadmi",
+    },
+    {
+      id: 5,
+      name: "Kasar",
+      photo: "images/jain-caste-images/kasar.png",
+      description: "Kasar",
+    },
+    {
+      id: 6,
+      name: "Khandelwal",
+      photo: "images/jain-caste-images/khandelwal.png",
+      description: "Khandelwal",
+    },
+    {
+      id: 7,
+      name: "Modh",
+      photo: "images/jain-caste-images/modh.png",
+      description: "Modh",
+    },
+    {
+      id: 8,
+      name: "Nadar",
+      photo: "images/jain-caste-images/nadar.png",
+      description: "Nadar",
+    },
+    {
+      id: 9,
+      name: "Oswal",
+      photo: "images/jain-caste-images/oswal.png",
+      description: "Oswal",
+    },
+    {
+      id: 10,
+      name: "Panchama",
+      photo: "images/jain-caste-images/panchama.png",
+      description: "Panchama",
+    },
+    {
+      id: 11,
+      name: "Porwal",
+      photo: "images/jain-caste-images/porwal.png",
+      description: "Porwal",
+    },
+    {
+      id: 12,
+      name: "Shrimal",
+      photo: "images/jain-caste-images/shrimal.png",
+      description: "Shrimal",
+    },
+    {
+      id: 13,
+      name: "Upadhyay",
+      photo: "images/jain-caste-images/upadhyay.png",
+      description: "Upadhyay",
+    },
+  ];
+
+  const sikhcastes = [
+    {
+      id: 1,
+      name: "Ahluwalia",
+      photo: "images/sikh-caste-images/ahluwalia.png",
+      description: "Ahluwalia",
+    },
+    {
+      id: 2,
+      name: "Arora",
+      photo: "images/sikh-caste-images/arora.png",
+      description: "Arora",
+    },
+    {
+      id: 3,
+      name: "Bhatra",
+      photo: "images/sikh-caste-images/bhatra.png",
+      description: "Bhatra",
+    },
+    {
+      id: 4,
+      name: "Kamboj",
+      photo: "images/sikh-caste-images/kamboj.png",
+      description: "Kamboj",
+    },
+    {
+      id: 5,
+      name: "Mazhabi",
+      photo: "images/sikh-caste-images/mazhabi.png",
+      description: "Mazhabi",
+    },
+    {
+      id: 6,
+      name: "Mehra",
+      photo: "images/sikh-caste-images/mehra.png",
+      description: "Mehra",
+    },
+    {
+      id: 7,
+      name: "Rai",
+      photo: "images/sikh-caste-images/rai.png",
+      description: "Rai",
+    },
+    {
+      id: 8,
+      name: "Ramdasia",
+      photo: "images/sikh-caste-images/ramdasia.png",
+      description: "ramdasia",
+    },
+    {
+      id: 9,
+      name: "Ramgarhia",
+      photo: "images/sikh-caste-images/ramgarhia.png",
+      description: "Ramgarhia",
+    },
+    {
+      id: 10,
+      name: "Saini",
+      photo: "images/sikh-caste-images/saini.png",
+      description: "Saini",
+    },
+    {
+      id: 11,
+      name: "Tarkhan",
+      photo: "images/sikh-caste-images/tarkhan.png",
+      description: "Tarkhan",
+    },
+  ];
+
+
+  const buddhistcaste = [
+    {
+      id: 1,
+      name: "Bhangi",
+      photo: "images/buddhist-caste-images/bhangi.png",
+      description: "Bhangi",
+    },
+    {
+      id: 2,
+      name: "Bhutia",
+      photo: "images/buddhist-caste-images/bhutia.png",
+      description: "Bhutia",
+    },
+    {
+      id: 3,
+      name: "Chakma",
+      photo: "images/buddhist-caste-images/chakma.png",
+      description: "Chakma",
+    },
+    {
+      id: 4,
+      name: "Dom",
+      photo: "images/buddhist-caste-images/dom.png",
+      description: "Dom",
+    },
+    {
+      id: 5,
+      name: "Lepcha",
+      photo: "images/buddhist-caste-images/lepcha.png",
+      description: "Lepcha",
+    },
+    {
+      id: 6,
+      name: "Matang",
+      photo: "images/buddhist-caste-images/matang.png",
+      description: "Matang",
+    },
+    {
+      id: 7,
+      name: "Oraon",
+      photo: "images/buddhist-caste-images/oraon.png",
+      description: "Oraon",
+    },
+    {
+      id: 8,
+      name: "Paswan",
+      photo: "images/buddhist-caste-images/paswan.png",
+      description: "Paswan",
+    },
+    {
+      id: 9,
+      name: "Santhal",
+      photo: "images/buddhist-caste-images/santhal.png",
+      description: "Santhal",
+    },
+    {
+      id: 10,
+      name: "Sherpa",
+      photo: "images/buddhist-caste-images/sherpa.png",
+      description: "Sherpa",
+    },
+  ];
+
   const religionData = [
     { id: 1, name: "Hindus", image: "images/hindu.png" },
     { id: 2, name: "Muslims", image: "images/muslim.png" },
@@ -685,21 +1011,48 @@ useEffect(() => {
           <hr className="mx-auto border border-slate-800 w-1/2 mt-2" />
 
           {/* Navbar Links */}
-          <div className="w-full flex gap-16 mt-2 items-center justify-center">
-            <div className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello">
+          <div className="w-5/6 mb-4 shrink-0 flex flex-wrap gap-2 gap-x-10 items-center justify-center mt-6">
+            <div
+              className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello "
+              onClick={() => scrollToSection("religion")}
+            >
               <span>Home</span>
             </div>
             <div
-              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("religion")}
             >
               <span>Religions</span>
             </div>
             <div
-              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("castes")}
             >
               <span>Hindu-Castes</span>
+            </div>
+            <div
+              className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello"
+              onClick={() => scrollToSection("muslim")}
+            >
+              <span>Muslim-Castes</span>
+            </div>
+            <div
+              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              onClick={() => scrollToSection("buddhist")}
+            >
+              <span>Buddhist-Castes</span>
+            </div>
+            <div
+              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              onClick={() => scrollToSection("jain")}
+            >
+              <span>Jain-Castes</span>
+            </div>
+            <div
+              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              onClick={() => scrollToSection("sikh")}
+            >
+              <span>Sikh-Castes</span>
             </div>
             {/* <div
               className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
@@ -747,7 +1100,7 @@ useEffect(() => {
           </div>
         </div>
       </div>
-      
+
       <div
         id="religion"
         className="w-full mt-24 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]"
@@ -809,9 +1162,108 @@ useEffect(() => {
 
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
 
-          <div className="h-[130vh] flex flex-wrap justify-center gap-6 px-20 overflow-auto ">
+          <div className="h-[130vh] w-5/6 flex flex-wrap items-center mx-auto justify-center gap-6 overflow-auto ">
             {/* Map over the data to display CasteCards */}
             {castes.map((caste) => (
+              <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
+            ))}
+          </div>
+        </div>
+        <div
+          id="muslim"
+          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
+        >
+          <div className="mx-auto font-bodoni w-fit px-5 text-[#776B5D] rounded-xl bg-white dp mb-5 ">
+            Muslim-Castes
+          </div>
+          <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
+            Celebrating the diversity of{" "}
+            <span className="text-5xl text-[#776B5D] font-bold"> 18 </span>{" "}
+            Muslim castes, this initiative reflects India’s unity in diversity.
+            Rooted in respect and inclusion, we aim to honor every community’s
+            contribution while striving for a bias-free AI representation of
+            India’s heritage.
+          </div>
+
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+
+          <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+            {/* Map over the data to display CasteCards */}
+            {muslimcastes.map((caste) => (
+              <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
+            ))}
+          </div>
+        </div>
+        <div
+          id="buddhist"
+          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
+        >
+          <div className="mx-auto font-bodoni w-fit px-5 text-[#776B5D] rounded-xl bg-white dp mb-5 ">
+            Buddhist-Castes
+          </div>
+          <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
+            Celebrating the diversity of
+            <span className="text-5xl text-[#776B5D] font-bold">10</span>
+            Buddhist castes, we honor the rich cultural tapestry they bring to
+            India. This initiative reflects our commitment to respect,
+            inclusion, and unbiased AI, showcasing the harmony within India’s
+            vibrant pluralism.
+          </div>
+
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+
+          <div className="h-[80vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+            {/* Map over the data to display CasteCards */}
+            {buddhistcaste.map((caste) => (
+              <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
+            ))}
+          </div>
+        </div>
+        <div
+          id="jain"
+          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
+        >
+          <div className="mx-auto font-bodoni w-fit px-5 text-[#776B5D] rounded-xl bg-white dp mb-5 ">
+            Jain-Castes
+          </div>
+          <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
+            Celebrating the diversity of
+            <span className="text-5xl text-[#776B5D] font-bold">13</span>
+            Jain castes, we acknowledge their unique heritage and contributions.
+            This initiative reflects our commitment to respect, inclusion, and
+            unbiased AI, showcasing India’s unity in diversity.
+          </div>
+
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+
+          <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+            {/* Map over the data to display CasteCards */}
+            {jaincastes.map((caste) => (
+              <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
+            ))}
+          </div>
+        </div>
+        <div
+          id="sikh"
+          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
+        >
+          <div className="mx-auto font-bodoni w-fit px-5 text-[#776B5D] rounded-xl bg-white dp mb-5 ">
+            Sikh-Castes
+          </div>
+          <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
+            Celebrating the diversity of
+            <span className="text-5xl text-[#776B5D] font-bold">11</span>
+            Sikh castes, we honor their contributions to India’s cultural
+            mosaic. Rooted in respect and inclusion, this initiative strives for
+            a bias-free AI representation of India’s vibrant pluralism and
+            unity.
+          </div>
+
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+
+          <div className="h-[80vh] flex flex-wrap justify-center items-center gap-6 w-5/6 mx-auto overflow-auto ">
+            {/* Map over the data to display CasteCards */}
+            {sikhcastes.map((caste) => (
               <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
             ))}
           </div>
