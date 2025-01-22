@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Gpt4oenglish from "../components/gpt4oenglish";
+import Gpt4oenglish from "../components/Gpt4oenglish";
 import Gpt4ohindi from "../components/Gpt4ohindi";
 
 function CasteDetails() {
