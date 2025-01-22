@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
