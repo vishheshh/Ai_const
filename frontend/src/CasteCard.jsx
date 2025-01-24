@@ -3,8 +3,10 @@ import { gsap } from "gsap";
 import { IoMdClose } from "react-icons/io";
 import { useDispatch } from "react-redux";
 import { setCasteDetails } from "./reducers/caste";
+import { useNavigate } from "react-router-dom";
 const CasteCard = ({ name, photo }) => {
   const [showOptions, setShowOptions] = useState(false);
+  const navigate = useNavigate();
 
   const optionsBoxRef = useRef(null);
   const dispatch = useDispatch();
@@ -18,7 +20,9 @@ const CasteCard = ({ name, photo }) => {
     dispatch(setCasteDetails({ name, photo, model }));
     const url = `/castes/${name.toLowerCase()}/${encodeURIComponent(model)}`;
     // console.log(url)
-    window.open(url, "_blank");
+    // window.open(url, "_blank");
+    navigate(url);
+    nab
   };
 
 
