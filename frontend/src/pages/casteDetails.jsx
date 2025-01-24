@@ -11,8 +11,8 @@ function CasteDetails() {
   console.log(decodedParam)
   return (
     <div className="w-full h-screen px-2 md:px-10">
-      {decodedParam === "GPT-4o English" && <Gpt4oenglish />}
-      {decodedParam === "GPT-4o Hindi" && <Gpt4ohindi />}
+      {decodedParam === "GPT-4o-English" && <Gpt4oenglish />}
+      {decodedParam === "GPT-4o-Hindi" && <Gpt4ohindi />}
       <div className="w-full h-32"></div>
     </div>
   );

@@ -102,13 +102,13 @@ const CasteCard = ({ name, photo }) => {
                 <ol className="list-decimal list-inside flex flex-col items-start">
                   <li
                     className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp"
-                    onClick={() => handleOptionClick("GPT-4o English")}
+                    onClick={() => handleOptionClick("GPT-4o-English")}
                   >
                     GPT-4o English
                   </li>
                   <li
                     className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp"
-                    onClick={() => handleOptionClick("GPT-4o Hindi")}
+                    onClick={() => handleOptionClick("GPT-4o-Hindi")}
                   >
                     GPT-4o Hindi
                   </li>
