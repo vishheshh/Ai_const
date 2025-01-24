@@ -9,7 +9,7 @@ const casteSlice = createSlice({
     setCasteDetails: (state, action) => {
       state.details = action.payload; // Set caste details
       // console.log(state.details)
-      console.log(state.details)
+      // console.log(state.details)
     },
     clearCasteDetails: (state) => {
       state.details = null; // Clear caste details
