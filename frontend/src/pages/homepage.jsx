@@ -1091,37 +1091,48 @@ useEffect(() => {
         >
           <div
             ref={textRef}
-            className="text-6xl text-[#73716C] font-bodoni px-4 transform-gpu"
+            className="text-5xl text-[#73716C] font-bodoni px-4 transform-gpu"
           >
-            Like India's Supreme Court's inclusive justice symbol,
-            <br />
-            We address caste bias in AI, promoting fairness, equality, and
-            societal respect
+            “Justice sees everyone equally”: Supreme Court unveils new 'Lady
+            Justice' statue symbolising modern Indian legal ideals - we are
+            committed to shaping the AI Constitution of India that mirrors this
+            ideal—where fairness is not an aspiration but an unwavering
+            principle. At its core lies a singular mission: to ensure AI upholds
+            equality, just as justice does."
           </div>
         </div>
       </div>
 
       <div
         id="religion"
-        className="w-full mt-24 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]"
+        className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]"
       >
         <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
-          <div className="w-2/3 mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl py-2">
+          <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
             {/* Religion Box */}
             <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
               Religions
             </div>
 
             {/* Vertical Separator */}
-            <div className="h-5/6 w-full sm:h-28 sm:w-[2px] bg-[#B0A695]"></div>
+            <div className="h-96 w-10 bg-[#B0A695]"></div>
 
             {/* Text Content */}
             <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
-              India is known for its diversity.
-              <br />
-              Our guiding principle is from the national anthem of India, which
-              was written by Rabindranath Tagore, which mentions the following 6
-              religions:
+              India is a land of unparalleled diversity. Our guiding principle
+              draws inspiration from the Indian national anthem -”হিন্দু বৌদ্ধ
+              শিখ জৈন পারসিক মুসলমান খৃস্টানী”, penned by Rabindranath Tagore,
+              which honors the spirit of unity by acknowledging seven major
+              religions. We recognize that caste dynamics within different
+              religious communities in India are complex and nuanced, often
+              shaped by historical, social, and regional factors. The diversity
+              we celebrate—whether among Hindu, Muslim, Buddhist, Jain, Sikh, or
+              other communities—is based on classifications drawn from the Other
+              Backward Classes (OBC) lists issued by both the central and state
+              governments. These lists provide an official framework for
+              understanding caste-based identities across religious traditions,
+              acknowledging the distinct socio-economic realities within each
+              community.
             </div>
           </div>
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
@@ -1146,18 +1157,18 @@ useEffect(() => {
             Hindu-Castes
           </div>
           <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
-            Through the AI Constitution of India, we celebrate the diversity of
-            <span className="text-5xl text-[#776B5D] font-bold"> 70 </span>
-            Hindu castes, showcasing the rich cultural heritage that unites us.
-            Our mission is rooted in respect, equality, and inclusion, ensuring
-            AI reflects India’s vibrant pluralism without bias. This effort is a
-            testament to unity in diversity, not discrimination or prejudice.
-            <br />
-            <br />
-            We acknowledge that these 70 castes do not fully represent India’s
-            vast diversity. With countless communities enriching the nation’s
-            cultural mosaic, this work is ongoing. We strive to include more of
-            India’s rich heritage as the project evolves.
+            Through the “AI Constitution of India,” we honor the rich cultural
+            tapestry of our nation by recognizing the diversity of{" "}
+            <span className="font-bold text-4xl">70</span> Hindu castes. This
+            initiative is a tribute to India’s vibrant pluralism—rooted in
+            respect, equality, and inclusion—ensuring that AI reflects our
+            collective heritage without bias. It is a testament to “unity in
+            diversity”, not division or discrimination.
+            <br /> We acknowledge that these 70 castes represent only a fraction
+            of India’s immense cultural and social diversity. With countless
+            communities shaping the nation’s identity, this is an evolving
+            effort. As the project grows, we remain committed to embracing and
+            reflecting the full breadth of India’s heritage.
           </div>
 
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
@@ -1177,12 +1188,16 @@ useEffect(() => {
             Muslim-Castes
           </div>
           <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
-            Celebrating the diversity of{" "}
-            <span className="text-5xl text-[#776B5D] font-bold"> 18 </span>{" "}
-            Muslim castes, this initiative reflects India’s unity in diversity.
-            Rooted in respect and inclusion, we aim to honor every community’s
-            contribution while striving for a bias-free AI representation of
-            India’s heritage.
+            Honoring the diversity of 18 Muslim castes, this initiative is a
+            tribute to India's Muslim communities' rich cultural and historical
+            contributions. India’s strength lies in its pluralism, and through
+            India's AI Constitution, we seek to uphold this legacy by fostering
+            AI systems that are inclusive, fair, and representative of every
+            identity.
+            <br /> We also acknowledge that 18 castes capture only a fraction of
+            the vast cultural spectrum within India’s Muslim society. Our work
+            remains an ongoing endeavor, evolving to embrace the many voices and
+            histories that shape our shared national identity.
           </div>
 
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
@@ -1202,12 +1217,16 @@ useEffect(() => {
             Buddhist-Castes
           </div>
           <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
-            Celebrating the diversity of
-            <span className="text-5xl text-[#776B5D] font-bold">10</span>
-            Buddhist castes, we honor the rich cultural tapestry they bring to
-            India. This initiative reflects our commitment to respect,
-            inclusion, and unbiased AI, showcasing the harmony within India’s
-            vibrant pluralism.
+            Celebrating the diversity of 10 Buddhist castes, we honor the
+            profound cultural and spiritual heritage they bring to India. Though
+            Buddhism was born in India, its wisdom and teachings have
+            transcended borders, flourishing worldwide and enriching countless
+            civilizations. This initiative reflects our commitment to respect,
+            inclusion, and unbiased AI, ensuring that the contributions of
+            Buddhist communities are recognized and represented with fairness.
+            By embracing the values of harmony and coexistence, we strive to
+            uphold India’s vibrant pluralism, where every tradition finds its
+            rightful place in the nation’s collective identity.
           </div>
 
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
@@ -1227,11 +1246,23 @@ useEffect(() => {
             Jain-Castes
           </div>
           <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
-            Celebrating the diversity of
-            <span className="text-5xl text-[#776B5D] font-bold">13</span>
-            Jain castes, we acknowledge their unique heritage and contributions.
-            This initiative reflects our commitment to respect, inclusion, and
-            unbiased AI, showcasing India’s unity in diversity.
+            Celebrating the diversity of 13 Jain castes, we honor their distinct
+            heritage, values, and profound contributions to India’s cultural,
+            philosophical, and ethical traditions. Jainism, one of the world's
+            oldest spiritual traditions, is deeply rooted in the principles of
+            ahimsa (non-violence), anekantavada (pluralism and multiple
+            perspectives), and aparigraha (non-possessiveness)—values that have
+            shaped India's moral and intellectual landscape for centuries. The
+            Jain community's contributions to education, commerce, and social
+            reform reflect a deep commitment to ethical living and
+            sustainability, inspiring generations beyond religious boundaries.
+            <br />
+            This initiative reaffirms our dedication to respect, inclusion, and
+            unbiased AI, ensuring that every community is represented with
+            fairness and authenticity. By embracing Jainism’s enduring legacy of
+            compassion, rational inquiry, and peaceful coexistence, we strive to
+            uphold India’s unity in diversity, where every tradition is
+            recognized, valued, and celebrated.
           </div>
 
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
@@ -1251,12 +1282,20 @@ useEffect(() => {
             Sikh-Castes
           </div>
           <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
-            Celebrating the diversity of
-            <span className="text-5xl text-[#776B5D] font-bold">11</span>
-            Sikh castes, we honor their contributions to India’s cultural
-            mosaic. Rooted in respect and inclusion, this initiative strives for
-            a bias-free AI representation of India’s vibrant pluralism and
-            unity.
+            Celebrating the diversity of 11 Sikh castes, we honor the profound
+            contributions of the Sikh community to India’s cultural, spiritual,
+            and historical legacy. Sikhism, founded on the principles of
+            equality, selfless service (seva), and justice, has long been a
+            force for social reform, rejecting caste hierarchies and advocating
+            for universal dignity. The Sikh ethos of chardi kala (eternal
+            optimism) and sarbat da bhala (welfare of all) exemplify a deep
+            commitment to unity and collective progress. This initiative
+            reflects our dedication to fairness, respect, and unbiased AI,
+            ensuring that India’s vibrant pluralism is authentically
+            represented. By embracing Sikhism’s enduring legacy of courage,
+            compassion, and inclusivity, we strive to create an AI framework
+            that reflects these ideals, reinforcing the spirit of unity in
+            diversity, where every community is recognized and celebrated.
           </div>
 
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
