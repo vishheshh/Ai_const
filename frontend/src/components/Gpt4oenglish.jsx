@@ -86,11 +86,11 @@ function Gpt4oenglish() {
       </div>
       {/* <img src="images/brahmin_english.jpeg" alt="" /> */}
       <div className="w-full h-screen mt-4 flex flex-col sm:flex-row justify-evenly items-center py-2 px-20 border-2 border-[#776B5D] rounded-xl">
-        <img
-          src="../../public/brahmin_images/brahmin_bar_chart.png"
-          className="w-1/2 object-scale-down "
-          alt=""
-        />
+          <img
+            src="../../public/brahmin_images/brahmin_bar_chart.png"
+            className="w-2/5 object-scale-down "
+            alt=""
+          />
         <img
           src="../../public/brahmin_images/Brahmin_truth.png"
           className="w-1/2 object-scale-down"

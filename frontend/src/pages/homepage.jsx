@@ -764,12 +764,12 @@ function Homepage() {
   ];
 
   const religionData = [
-    { id: 1, name: "Hindus", image: "images/hindu.png" },
-    { id: 2, name: "Muslims", image: "images/muslim.png" },
-    { id: 3, name: "Christians", image: "images/christian.png" },
-    { id: 4, name: "Sikhs", image: "images/sikh.png" },
-    { id: 5, name: "Buddhists", image: "images/buddhist.png" },
-    { id: 6, name: "Jains", image: "images/jain.jpg" },
+    { id: 1, name: "Hindus", image: "images/religion-images/hindu.png" },
+    { id: 2, name: "Muslims", image: "images/religion-images/muslim.png" },
+    { id: 3, name: "Christians", image: "images/religion-images/christian.png" },
+    { id: 4, name: "Sikhs", image: "images/religion-images/sikh.png" },
+    { id: 5, name: "Buddhists", image: "images/religion-images/buddhist.png" },
+    { id: 6, name: "Jains", image: "images/religion-images/jain.png" },
   ];
 
 const PersonData = [
@@ -815,7 +815,7 @@ const PersonData = [
   {
     id: 4,
     name: "Aryan Kasat",
-    image: "images/team/aryan.png",
+    image: "images/team/aryan.jpeg",
     affiliation: "Researcher AIISC",
     socialMedia: [
       {
@@ -1026,33 +1026,33 @@ useEffect(() => {
             </div>
             <div
               className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello"
-              onClick={() => scrollToSection("castes")}
+              onClick={() => scrollToSection("hindu")}
             >
-              <span>Hindu-Castes</span>
+              <span>Hindu Castes</span>
             </div>
             <div
               className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("muslim")}
             >
-              <span>Muslim-Castes</span>
+              <span>Muslim Castes</span>
             </div>
             <div
               className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("buddhist")}
             >
-              <span>Buddhist-Castes</span>
+              <span>Buddhist Castes</span>
             </div>
             <div
               className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("jain")}
             >
-              <span>Jain-Castes</span>
+              <span>Jain Castes</span>
             </div>
             <div
               className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("sikh")}
             >
-              <span>Sikh-Castes</span>
+              <span>Sikh Castes</span>
             </div>
             {/* <div
               className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
@@ -1060,17 +1060,19 @@ useEffect(() => {
             >
               <span>News</span>
             </div> */}
+
+            <div
+              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              onClick={() => navigate("/mixcastes")}
+            >
+              <span>Mix Castes</span>
+            </div>
+
             <div
               className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("team")}
             >
               <span>Team</span>
-            </div>
-            <div
-              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
-              onClick={() => navigate("/mixcastes")}
-            >
-              <span>Mix</span>
             </div>
           </div>
         </div>
@@ -1091,7 +1093,7 @@ useEffect(() => {
         >
           <div
             ref={textRef}
-            className="text-5xl text-[#73716C] font-bodoni px-4 transform-gpu"
+            className="text-4xl text-[#73716C] font-[500] px-3 text-center"
           >
             “Justice sees everyone equally”: Supreme Court unveils new 'Lady
             Justice' statue symbolising modern Indian legal ideals - we are
@@ -1151,12 +1153,19 @@ useEffect(() => {
         </div>
       </div>
 
-      <div id="castes" className="mx-auto mt-24 h-auto">
-        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl">
-          <div className="mx-auto font-bodoni w-fit px-5  text-[#776B5D] rounded-xl bg-white dp mb-5 ">
-            Hindu-Castes
+      <div id="hindu" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
+        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
+        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
+          {/* Hindu Caste Box*/}
+          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+            Hindu Castes
           </div>
-          <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
+
+          {/* Vertical Separator */}
+          <div className="h-96 w-10 bg-[#B0A695]"></div>
+          
+          {/* Text Content */}
+          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
             Through the “AI Constitution of India,” we honor the rich cultural
             tapestry of our nation by recognizing the diversity of{" "}
             <span className="font-bold text-4xl">70</span> Hindu castes. This
@@ -1170,7 +1179,7 @@ useEffect(() => {
             effort. As the project grows, we remain committed to embracing and
             reflecting the full breadth of India’s heritage.
           </div>
-
+          </div>
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
 
           <div className="h-[130vh] w-5/6 flex flex-wrap items-center mx-auto justify-center gap-6 overflow-auto ">
@@ -1180,15 +1189,22 @@ useEffect(() => {
             ))}
           </div>
         </div>
-        <div
-          id="muslim"
-          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
-        >
-          <div className="mx-auto font-bodoni w-fit px-5 text-[#776B5D] rounded-xl bg-white dp mb-5 ">
-            Muslim-Castes
+        </div>
+
+        <div id="muslim" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
+        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
+        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
+          {/* Muslim Caste Box*/}
+          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+            Muslim Castes
           </div>
-          <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
-            Honoring the diversity of 18 Muslim castes, this initiative is a
+
+          {/* Vertical Separator */}
+          <div className="h-96 w-10 bg-[#B0A695]"></div>
+          
+          {/* Text Content */}
+          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
+            Honoring the diversity of{" "} <span className="font-bold text-4xl">18 </span> Muslim castes, this initiative is a
             tribute to India's Muslim communities' rich cultural and historical
             contributions. India’s strength lies in its pluralism, and through
             India's AI Constitution, we seek to uphold this legacy by fostering
@@ -1199,7 +1215,7 @@ useEffect(() => {
             remains an ongoing endeavor, evolving to embrace the many voices and
             histories that shape our shared national identity.
           </div>
-
+          </div>
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
 
           <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
@@ -1209,15 +1225,22 @@ useEffect(() => {
             ))}
           </div>
         </div>
-        <div
-          id="buddhist"
-          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
-        >
-          <div className="mx-auto font-bodoni w-fit px-5 text-[#776B5D] rounded-xl bg-white dp mb-5 ">
-            Buddhist-Castes
           </div>
-          <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
-            Celebrating the diversity of 10 Buddhist castes, we honor the
+
+          <div id="buddhist" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
+        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
+        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
+          {/* Buddhist Caste Box*/}
+          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+            Buddhist Castes
+          </div>
+
+          {/* Vertical Separator */}
+          <div className="h-96 w-10 bg-[#B0A695]"></div>
+          
+          {/* Text Content */}
+          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
+            Celebrating the diversity of{" "} <span className="font-bold text-4xl">10 </span> Buddhist castes, we honor the
             profound cultural and spiritual heritage they bring to India. Though
             Buddhism was born in India, its wisdom and teachings have
             transcended borders, flourishing worldwide and enriching countless
@@ -1228,7 +1251,7 @@ useEffect(() => {
             uphold India’s vibrant pluralism, where every tradition finds its
             rightful place in the nation’s collective identity.
           </div>
-
+          </div>
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
 
           <div className="h-[80vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
@@ -1238,15 +1261,23 @@ useEffect(() => {
             ))}
           </div>
         </div>
-        <div
-          id="jain"
-          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
-        >
-          <div className="mx-auto font-bodoni w-fit px-5 text-[#776B5D] rounded-xl bg-white dp mb-5 ">
-            Jain-Castes
+        </div>
+
+
+        <div id="jain" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
+        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
+        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
+          {/* Jain Caste Box*/}
+          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+            Jain Castes
           </div>
-          <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
-            Celebrating the diversity of 13 Jain castes, we honor their distinct
+
+          {/* Vertical Separator */}
+          <div className="h-96 w-10 bg-[#B0A695]"></div>
+          
+          {/* Text Content */}
+          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
+            Celebrating the diversity of{" "} <span className="font-bold text-4xl">13 </span> Jain castes, we honor their distinct
             heritage, values, and profound contributions to India’s cultural,
             philosophical, and ethical traditions. Jainism, one of the world's
             oldest spiritual traditions, is deeply rooted in the principles of
@@ -1264,7 +1295,7 @@ useEffect(() => {
             uphold India’s unity in diversity, where every tradition is
             recognized, valued, and celebrated.
           </div>
-
+            </div>
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
 
           <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
@@ -1274,15 +1305,23 @@ useEffect(() => {
             ))}
           </div>
         </div>
-        <div
-          id="sikh"
-          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
-        >
-          <div className="mx-auto font-bodoni w-fit px-5 text-[#776B5D] rounded-xl bg-white dp mb-5 ">
-            Sikh-Castes
+            </div>
+
+
+            <div id="sikh" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
+        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
+        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
+          {/* Sikh Caste Box*/}
+          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+            Sikh Castes
           </div>
-          <div className="w-2/3 mx-auto text-3xl text-[#73716C] text-center px-4 hello mb-5 font-thin">
-            Celebrating the diversity of 11 Sikh castes, we honor the profound
+
+          {/* Vertical Separator */}
+          <div className="h-96 w-10 bg-[#B0A695]"></div>
+          
+          {/* Text Content */}
+          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
+            Celebrating the diversity of{" "} <span className="font-bold text-4xl">11</span> Sikh castes, we honor the profound
             contributions of the Sikh community to India’s cultural, spiritual,
             and historical legacy. Sikhism, founded on the principles of
             equality, selfless service (seva), and justice, has long been a
@@ -1297,7 +1336,7 @@ useEffect(() => {
             that reflects these ideals, reinforcing the spirit of unity in
             diversity, where every community is recognized and celebrated.
           </div>
-
+          </div>
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
 
           <div className="h-[80vh] flex flex-wrap justify-center items-center gap-6 w-5/6 mx-auto overflow-auto ">
