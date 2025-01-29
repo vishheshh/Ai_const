@@ -1155,7 +1155,7 @@ function Homepage() {
         </div>
       </div>
 
-      <div id="castes" className="mx-auto mt-24 h-auto">
+      <div id="hindu" className="mx-auto mt-24 h-auto">
         <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl">
           <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] rounded-xl p-4 ">
             {/* Religion Box */}

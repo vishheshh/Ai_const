@@ -104,7 +104,7 @@ function Gpt4oenglish() {
               Insights Derived from Caste Bias Scores in ChatGPT's Predictions
             </div>
             <hr className="border my-2 border-[#B0A695] w-full mx-auto" />
-            <div className="hello text-gray-800 font-[400]">
+            <div className="hello text-gray-800 font-[400] text-lg">
               <ol>
                 <div className="flex gap-2 mt-1">
                   {" "}
