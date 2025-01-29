@@ -1,4 +1,4 @@
-import React, { useRef,useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -548,7 +548,6 @@ function Homepage() {
     },
   ];
 
-
   const jaincastes = [
     {
       id: 1,
@@ -699,7 +698,6 @@ function Homepage() {
     },
   ];
 
-
   const buddhistcaste = [
     {
       id: 1,
@@ -766,105 +764,109 @@ function Homepage() {
   const religionData = [
     { id: 1, name: "Hindus", image: "images/religion-images/hindu.png" },
     { id: 2, name: "Muslims", image: "images/religion-images/muslim.png" },
-    { id: 3, name: "Christians", image: "images/religion-images/christian.png" },
+    {
+      id: 3,
+      name: "Christians",
+      image: "images/religion-images/christian.png",
+    },
     { id: 4, name: "Sikhs", image: "images/religion-images/sikh.png" },
     { id: 5, name: "Buddhists", image: "images/religion-images/buddhist.png" },
     { id: 6, name: "Jains", image: "images/religion-images/jain.png" },
   ];
 
-const PersonData = [
-  {
-    id: 1,
-    name: "Dr. Amitava Das",
-    image: "images/team/amitava.png",
-    affiliation: "Faculty AIISC@USC",
-    socialMedia: [
-      {
-        platform: "linkedin",
-        link: "https:/www.linkedin.com/in/dr-amitava-das-78348022/",
-        image: "images/LinkedIn_icon_circle.png",
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "Aman Chadha",
-    image: "images/team/aman_chadda.jpg",
-    affiliation: "Amazon GenAI",
-    socialMedia: [
-      {
-        platform: "linkedin",
-        link: "https:/www.linkedin.com/in/amanc/",
-        image: "images/LinkedIn_icon_circle.png",
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "Vinija Jain",
-    image: "images/team/Vinija.jpg",
-    affiliation: "Meta",
-    socialMedia: [
-      {
-        platform: "linkedin",
-        link: "https:/www.linkedin.com/in/vinija/",
-        image: "images/LinkedIn_icon_circle.png",
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: "Aryan Kasat",
-    image: "images/team/aryan.jpeg",
-    affiliation: "Researcher AIISC",
-    socialMedia: [
-      {
-        platform: "linkedin",
-        link: "https:/www.linkedin.com/in/aryan-kasat-539377211/",
-        image: "images/LinkedIn_icon_circle.png",
-      },
-    ],
-  },
-  {
-    id: 5,
-    name: "Kaustubh Kumar",
-    image: "images/team/kaustubh.JPG",
-    affiliation: "Researcher AIISC",
-    socialMedia: [
-      {
-        platform: "linkedin",
-        link: "https:/www.linkedin.com/in/kaustubh-kumar-55930a264/",
-        image: "images/LinkedIn_icon_circle.png",
-      },
-    ],
-  },
-  {
-    id: 6,
-    name: "Snehasis M",
-    image: "images/team/snehasis.jpeg",
-    affiliation: "Researcher AIISC",
-    socialMedia: [
-      {
-        platform: "linkedin",
-        link: "https:/www.linkedin.com/in/snehasis-mukhopadhyay-344519252/",
-        image: "images/LinkedIn_icon_circle.png",
-      },
-    ],
-  },
-  {
-    id: 7,
-    name: "Vishesh Pandey",
-    image: "images/team/vishesh3.jpg",
-    affiliation: "Researcher AIISC",
-    socialMedia: [
-      {
-        platform: "linkedin",
-        link: "https:/www.linkedin.com/in/vishesh-pandey-b3814b250/",
-        image: "images/LinkedIn_icon_circle.png",
-      },
-    ],
-  },
-];
+  const PersonData = [
+    {
+      id: 1,
+      name: "Dr. Amitava Das",
+      image: "images/team/amitava.png",
+      affiliation: "Faculty AIISC@USC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/dr-amitava-das-78348022/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "Aman Chadha",
+      image: "images/team/aman_chadda.jpg",
+      affiliation: "Amazon GenAI",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/amanc/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "Vinija Jain",
+      image: "images/team/Vinija.jpg",
+      affiliation: "Meta",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/vinija/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 4,
+      name: "Aryan Kasat",
+      image: "images/team/aryan.jpeg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/aryan-kasat-539377211/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 5,
+      name: "Kaustubh Kumar",
+      image: "images/team/kaustubh.JPG",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/kaustubh-kumar-55930a264/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 6,
+      name: "Snehasis M",
+      image: "images/team/snehasis.jpeg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/snehasis-mukhopadhyay-344519252/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 7,
+      name: "Vishesh Pandey",
+      image: "images/team/vishesh3.jpg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/vishesh-pandey-b3814b250/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+  ];
 
   const NextArrow = ({ onClick }) => {
     return (
@@ -905,80 +907,80 @@ const PersonData = [
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-    const containerRef = useRef(null);
-useEffect(() => {
-  // Initial timeline for entrance animation
-  const tl = gsap.timeline({
-    defaults: { ease: "power3.out" },
-  });
+  const containerRef = useRef(null);
+  useEffect(() => {
+    // Initial timeline for entrance animation
+    const tl = gsap.timeline({
+      defaults: { ease: "power3.out" },
+    });
 
-  // Image container animation
-  tl.from(imageRef.current, {
-    x: "-100%",
-    duration: 1.5,
-    ease: "power4.out",
-  });
-  
-  // Text container animation
-  tl.from(
-    textContainerRef.current,
-    {
-      x: "100%",
+    // Image container animation
+    tl.from(imageRef.current, {
+      x: "-100%",
       duration: 1.5,
       ease: "power4.out",
-    },
-    "<"
-  );
+    });
 
-  // Text animation with split effect
-  const words = textRef.current.innerHTML.split(" ");
-  textRef.current.innerHTML = "";
+    // Text container animation
+    tl.from(
+      textContainerRef.current,
+      {
+        x: "100%",
+        duration: 1.5,
+        ease: "power4.out",
+      },
+      "<"
+    );
 
-  words.forEach((word) => {
-    const span = document.createElement("span");
-    span.innerHTML = word + " ";
-    textRef.current.appendChild(span);
-  });
+    // Text animation with split effect
+    const words = textRef.current.innerHTML.split(" ");
+    textRef.current.innerHTML = "";
 
-  tl.from(
-    textRef.current.children,
-    {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.05,
-      ease: "back.out(1.7)",
-    },
-    "-=1"
-  );
+    words.forEach((word) => {
+      const span = document.createElement("span");
+      span.innerHTML = word + " ";
+      textRef.current.appendChild(span);
+    });
 
-  // Scroll-triggered parallax effect
-  gsap.to(imageRef.current, {
-    y: "20%",
-    scrollTrigger: {
-      trigger: containerRef.current,
-      start: "top top",
-      end: "bottom top",
-      scrub: 1.5,
-    },
-  });
+    tl.from(
+      textRef.current.children,
+      {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.05,
+        ease: "back.out(1.7)",
+      },
+      "-=1"
+    );
 
-  // Subtle text movement on scroll
-  gsap.to(textRef.current, {
-    y: "-10%",
-    scrollTrigger: {
-      trigger: containerRef.current,
-      start: "top top",
-      end: "bottom top",
-      scrub: 1,
-    },
-  });
+    // Scroll-triggered parallax effect
+    gsap.to(imageRef.current, {
+      y: "20%",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 1.5,
+      },
+    });
 
-  // Cleanup
-  return () => {
-    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  };
-}, []);
+    // Subtle text movement on scroll
+    gsap.to(textRef.current, {
+      y: "-10%",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+      },
+    });
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
   return (
     <div className="w-full relative py-2">
       {/* <div className="w-full relative"> */}
@@ -1089,7 +1091,7 @@ useEffect(() => {
         </div>
         <div
           ref={textContainerRef}
-          className="w-1/3 h-full flex flex-col items-center justify-center bg-[#F5F3EF] rounded-r-2xl overflow-hidden relative"
+          className="w-1/3 font-bodoni h-full flex flex-col items-center justify-center bg-[#F5F3EF] rounded-r-2xl overflow-hidden relative"
         >
           <div
             ref={textRef}
@@ -1137,7 +1139,7 @@ useEffect(() => {
               community.
             </div>
           </div>
-          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+          {/* <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" /> */}
 
           <div className="h-auto flex flex-wrap justify-center gap-6 p-6">
             {/* Map over the data to display ReligionCards */}
@@ -1153,34 +1155,39 @@ useEffect(() => {
         </div>
       </div>
 
-      <div id="hindu" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
-        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
-        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
-          {/* Hindu Caste Box*/}
-          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
-            Hindu Castes
+      <div id="castes" className="mx-auto mt-24 h-auto">
+        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl">
+          <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] rounded-xl p-4 ">
+            {/* Religion Box */}
+            <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+              Hindu-Castes
+            </div>
+
+            {/* Vertical Separator */}
+            <div className="h-96 w-10 bg-[#B0A695]"></div>
+
+            {/* Text Content */}
+            <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
+              We acknowledge that these 70 castes do not fully represent India’s
+              vast diversity. With countless communities enriching the nation’s
+              cultural mosaic, this work is ongoing. We strive to include more
+              of India’s rich heritage as the project evolves. Through the “AI
+              Constitution of India,” we honor the rich cultural tapestry of our
+              nation by recognizing the diversity of{" "}
+              <span className="font-bold text-4xl">70</span> Hindu castes. This
+              initiative is a tribute to India’s vibrant pluralism—rooted in
+              respect, equality, and inclusion—ensuring that AI reflects our
+              collective heritage without bias. It is a testament to “unity in
+              diversity”, not division or discrimination.
+              <br /> We acknowledge that these 70 castes represent only a
+              fraction of India’s immense cultural and social diversity. With
+              countless communities shaping the nation’s identity, this is an
+              evolving effort. As the project grows, we remain committed to
+              embracing and reflecting the full breadth of India’s heritage.
+            </div>
+          {/* <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" /> */}
           </div>
 
-          {/* Vertical Separator */}
-          <div className="h-96 w-10 bg-[#B0A695]"></div>
-          
-          {/* Text Content */}
-          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
-            Through the “AI Constitution of India,” we honor the rich cultural
-            tapestry of our nation by recognizing the diversity of{" "}
-            <span className="font-bold text-4xl">70</span> Hindu castes. This
-            initiative is a tribute to India’s vibrant pluralism—rooted in
-            respect, equality, and inclusion—ensuring that AI reflects our
-            collective heritage without bias. It is a testament to “unity in
-            diversity”, not division or discrimination.
-            <br /> We acknowledge that these 70 castes represent only a fraction
-            of India’s immense cultural and social diversity. With countless
-            communities shaping the nation’s identity, this is an evolving
-            effort. As the project grows, we remain committed to embracing and
-            reflecting the full breadth of India’s heritage.
-          </div>
-          </div>
-          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
 
           <div className="h-[130vh] w-5/6 flex flex-wrap items-center mx-auto justify-center gap-6 overflow-auto ">
             {/* Map over the data to display CasteCards */}
@@ -1189,33 +1196,38 @@ useEffect(() => {
             ))}
           </div>
         </div>
-        </div>
+        <div
+          id="muslim"
+          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
+        >
+          <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] rounded-xl p-4 ">
+            {/* Religion Box */}
+            <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+              Muslim-Castes
+            </div>
 
-        <div id="muslim" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
-        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
-        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
-          {/* Muslim Caste Box*/}
-          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
-            Muslim Castes
+            {/* Vertical Separator */}
+            <div className="h-96 w-10 bg-[#B0A695]"></div>
+
+            {/* Text Content */}
+            <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
+              Muslim castes, this initiative reflects India’s unity in
+              diversity. Rooted in respect and inclusion, we aim to honor every
+              community’s contribution while striving for a bias-free AI
+              representation of India’s heritage. Honoring the diversity of 18
+              Muslim castes, this initiative is a tribute to India's Muslim
+              communities' rich cultural and historical contributions. India’s
+              strength lies in its pluralism, and through India's AI
+              Constitution, we seek to uphold this legacy by fostering AI
+              systems that are inclusive, fair, and representative of every
+              identity.
+              <br /> We also acknowledge that 18 castes capture only a fraction
+              of the vast cultural spectrum within India’s Muslim society. Our
+              work remains an ongoing endeavor, evolving to embrace the many
+              voices and histories that shape our shared national identity.
+            </div>
           </div>
 
-          {/* Vertical Separator */}
-          <div className="h-96 w-10 bg-[#B0A695]"></div>
-          
-          {/* Text Content */}
-          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
-            Honoring the diversity of{" "} <span className="font-bold text-4xl">18 </span> Muslim castes, this initiative is a
-            tribute to India's Muslim communities' rich cultural and historical
-            contributions. India’s strength lies in its pluralism, and through
-            India's AI Constitution, we seek to uphold this legacy by fostering
-            AI systems that are inclusive, fair, and representative of every
-            identity.
-            <br /> We also acknowledge that 18 castes capture only a fraction of
-            the vast cultural spectrum within India’s Muslim society. Our work
-            remains an ongoing endeavor, evolving to embrace the many voices and
-            histories that shape our shared national identity.
-          </div>
-          </div>
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
 
           <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
@@ -1224,35 +1236,45 @@ useEffect(() => {
               <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
             ))}
           </div>
+        <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
         </div>
+
+
+        <div
+          id="buddhist"
+          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
+        >
+          <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF]  rounded-xl p-4 ">
+            {/* Religion Box */}
+            <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+              Buddhist-Castes
+            </div>
+
+            {/* Vertical Separator */}
+            <div className="h-96 w-10 bg-[#B0A695]"></div>
+
+            {/* Text Content */}
+            <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
+              Celebrating the diversity of
+              <span className="text-5xl text-[#776B5D] font-bold">10</span>
+              Buddhist castes, we honor the rich cultural tapestry they bring to
+              India. This initiative reflects our commitment to respect,
+              inclusion, and unbiased AI, showcasing the harmony within India’s
+              vibrant pluralism. Celebrating the diversity of 10 Buddhist
+              castes, we honor the profound cultural and spiritual heritage they
+              bring to India. Though Buddhism was born in India, its wisdom and
+              teachings have transcended borders, flourishing worldwide and
+              enriching countless civilizations. This initiative reflects our
+              commitment to respect, inclusion, and unbiased AI, ensuring that
+              the contributions of Buddhist communities are recognized and
+              represented with fairness. By embracing the values of harmony and
+              coexistence, we strive to uphold India’s vibrant pluralism, where
+              every tradition finds its rightful place in the nation’s
+              collective identity.
+            </div>
           </div>
 
-          <div id="buddhist" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
-        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
-        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
-          {/* Buddhist Caste Box*/}
-          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
-            Buddhist Castes
-          </div>
-
-          {/* Vertical Separator */}
-          <div className="h-96 w-10 bg-[#B0A695]"></div>
-          
-          {/* Text Content */}
-          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
-            Celebrating the diversity of{" "} <span className="font-bold text-4xl">10 </span> Buddhist castes, we honor the
-            profound cultural and spiritual heritage they bring to India. Though
-            Buddhism was born in India, its wisdom and teachings have
-            transcended borders, flourishing worldwide and enriching countless
-            civilizations. This initiative reflects our commitment to respect,
-            inclusion, and unbiased AI, ensuring that the contributions of
-            Buddhist communities are recognized and represented with fairness.
-            By embracing the values of harmony and coexistence, we strive to
-            uphold India’s vibrant pluralism, where every tradition finds its
-            rightful place in the nation’s collective identity.
-          </div>
-          </div>
-          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
 
           <div className="h-[80vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}
@@ -1260,43 +1282,49 @@ useEffect(() => {
               <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
             ))}
           </div>
+          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
         </div>
-        </div>
 
-
-        <div id="jain" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
-        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
-        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
-          {/* Jain Caste Box*/}
-          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
-            Jain Castes
-          </div>
-
-          {/* Vertical Separator */}
-          <div className="h-96 w-10 bg-[#B0A695]"></div>
-          
-          {/* Text Content */}
-          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
-            Celebrating the diversity of{" "} <span className="font-bold text-4xl">13 </span> Jain castes, we honor their distinct
-            heritage, values, and profound contributions to India’s cultural,
-            philosophical, and ethical traditions. Jainism, one of the world's
-            oldest spiritual traditions, is deeply rooted in the principles of
-            ahimsa (non-violence), anekantavada (pluralism and multiple
-            perspectives), and aparigraha (non-possessiveness)—values that have
-            shaped India's moral and intellectual landscape for centuries. The
-            Jain community's contributions to education, commerce, and social
-            reform reflect a deep commitment to ethical living and
-            sustainability, inspiring generations beyond religious boundaries.
-            <br />
-            This initiative reaffirms our dedication to respect, inclusion, and
-            unbiased AI, ensuring that every community is represented with
-            fairness and authenticity. By embracing Jainism’s enduring legacy of
-            compassion, rational inquiry, and peaceful coexistence, we strive to
-            uphold India’s unity in diversity, where every tradition is
-            recognized, valued, and celebrated.
-          </div>
+        <div
+          id="jain"
+          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
+        >
+          <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] rounded-xl p-4 ">
+            {/* Religion Box */}
+            <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+              Jain-Castes
             </div>
-          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+
+            {/* Vertical Separator */}
+            <div className="h-96 w-10 bg-[#B0A695]"></div>
+
+            {/* Text Content */}
+            <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
+              Celebrating the diversity of
+              <span className="text-5xl text-[#776B5D] font-bold">13</span>
+              Jain castes, we acknowledge their unique heritage and
+              contributions. This initiative reflects our commitment to respect,
+              inclusion, and unbiased AI, showcasing India’s unity in diversity.
+              Celebrating the diversity of 13 Jain castes, we honor their
+              distinct heritage, values, and profound contributions to India’s
+              cultural, philosophical, and ethical traditions. Jainism, one of
+              the world's oldest spiritual traditions, is deeply rooted in the
+              principles of ahimsa (non-violence), anekantavada (pluralism and
+              multiple perspectives), and aparigraha (non-possessiveness)—values
+              that have shaped India's moral and intellectual landscape for
+              centuries. The Jain community's contributions to education,
+              commerce, and social reform reflect a deep commitment to ethical
+              living and sustainability, inspiring generations beyond religious
+              boundaries.
+              <br />
+              This initiative reaffirms our dedication to respect, inclusion,
+              and unbiased AI, ensuring that every community is represented with
+              fairness and authenticity. By embracing Jainism’s enduring legacy
+              of compassion, rational inquiry, and peaceful coexistence, we
+              strive to uphold India’s unity in diversity, where every tradition
+              is recognized, valued, and celebrated.
+            </div>
+          </div>
 
           <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}
@@ -1304,47 +1332,54 @@ useEffect(() => {
               <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
             ))}
           </div>
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
         </div>
+
+        <div
+          id="jain"
+          className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
+        >
+          <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] rounded-xl p-4 ">
+            {/* Religion Box */}
+            <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
+              Sikh-Castes
             </div>
 
+            {/* Vertical Separator */}
+            <div className="h-96 w-10 bg-[#B0A695]"></div>
 
-            <div id="sikh" className="w-full mt-24 mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D]">
-        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
-        <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4 ">
-          {/* Sikh Caste Box*/}
-          <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
-            Sikh Castes
+            {/* Text Content */}
+            <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
+              Celebrating the diversity of
+              <span className="text-5xl text-[#776B5D] font-bold">11</span>
+              Sikh castes, we honor their contributions to India’s cultural
+              mosaic. Rooted in respect and inclusion, this initiative strives
+              for a bias-free AI representation of India’s vibrant pluralism and
+              unity. Celebrating the diversity of 11 Sikh castes, we honor the
+              profound contributions of the Sikh community to India’s cultural,
+              spiritual, and historical legacy. Sikhism, founded on the
+              principles of equality, selfless service (seva), and justice, has
+              long been a force for social reform, rejecting caste hierarchies
+              and advocating for universal dignity. The Sikh ethos of chardi
+              kala (eternal optimism) and sarbat da bhala (welfare of all)
+              exemplify a deep commitment to unity and collective progress. This
+              initiative reflects our dedication to fairness, respect, and
+              unbiased AI, ensuring that India’s vibrant pluralism is
+              authentically represented. By embracing Sikhism’s enduring legacy
+              of courage, compassion, and inclusivity, we strive to create an AI
+              framework that reflects these ideals, reinforcing the spirit of
+              unity in diversity, where every community is recognized and
+              celebrated.
+            </div>
           </div>
 
-          {/* Vertical Separator */}
-          <div className="h-96 w-10 bg-[#B0A695]"></div>
-          
-          {/* Text Content */}
-          <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
-            Celebrating the diversity of{" "} <span className="font-bold text-4xl">11</span> Sikh castes, we honor the profound
-            contributions of the Sikh community to India’s cultural, spiritual,
-            and historical legacy. Sikhism, founded on the principles of
-            equality, selfless service (seva), and justice, has long been a
-            force for social reform, rejecting caste hierarchies and advocating
-            for universal dignity. The Sikh ethos of chardi kala (eternal
-            optimism) and sarbat da bhala (welfare of all) exemplify a deep
-            commitment to unity and collective progress. This initiative
-            reflects our dedication to fairness, respect, and unbiased AI,
-            ensuring that India’s vibrant pluralism is authentically
-            represented. By embracing Sikhism’s enduring legacy of courage,
-            compassion, and inclusivity, we strive to create an AI framework
-            that reflects these ideals, reinforcing the spirit of unity in
-            diversity, where every community is recognized and celebrated.
-          </div>
-          </div>
-          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
-
-          <div className="h-[80vh] flex flex-wrap justify-center items-center gap-6 w-5/6 mx-auto overflow-auto ">
+          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}
             {sikhcastes.map((caste) => (
               <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
             ))}
           </div>
+          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
         </div>
       </div>
 

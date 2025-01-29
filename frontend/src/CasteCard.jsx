@@ -22,7 +22,7 @@ const CasteCard = ({ name, photo }) => {
     // console.log(url)
     // window.open(url, "_blank");
     navigate(url);
-    nab
+    
   };
 
 
@@ -81,7 +81,9 @@ const CasteCard = ({ name, photo }) => {
         >
           <div
             ref={optionsBoxRef}
-            className="bg-white p-6 rounded-lg shadow-lg text-center space-y-4 md:w-5/12"
+            // style={{ position: "fixed", top: 50, left: 50, right: , bottom: 50}}
+            className="bg-white p-6 rounded-lg shadow-lg text-center space-y-4 md:w-5/12 
+                 "
           >
             <div className="flex justify-between items-center">
               <div className="mx-auto w-fit px-5 bg-[#F5F3EF] text-[#776B5D] rounded-xl dp mb-5 text-5xl font-bodoni">
@@ -99,7 +101,7 @@ const CasteCard = ({ name, photo }) => {
                 alt={name}
                 className="w-1/3 object-cover group-hover:brightness-75 transition duration-300 dp"
               />
-              <div className="flex flex-col text-[#776B5D] p-10 ml-3 rounded-lg text-3xl ">
+              <div className="flex flex-col text-[#776B5D] p-10 ml-3 rounded-lg text-3xl">
                 <h2 className="text-3xl font-semibold text-gray-600 mb-8">
                   Available Models
                 </h2>

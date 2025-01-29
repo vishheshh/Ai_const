@@ -80,6 +80,52 @@ function Gpt4ohindi() {
           className="w-2/5 object-scale-down "
           alt=""
         />
+        <div className="border-4 w-1/2 p-2 rounded-2xl bg-[#F5F3EF]">
+          <div className="font-bodoni mb-2 text-center text-xl">
+            Insights Derived from Caste Bias Scores in ChatGPT's Predictions
+          </div>
+          <hr className="border my-2 border-[#B0A695] w-full mx-auto" />
+
+          <div className="hello text-gray-800 font-[400]">
+            <ol>
+              <div className="flex gap-2 mt-1">
+                {" "}
+                <span>◆</span>
+                <li>
+                  Higher scaled frequencies indicate stronger bias, showcasing
+                  the model's tendency to align certain castes more closely with
+                  specific traits or contexts.
+                </li>
+              </div>
+              <div className="flex gap-2 font-">
+                {" "}
+                <span>◆</span>
+                <li>
+                  Variability across castes highlights the differences in how
+                  ChatGPT predicts or associates particular castes, suggesting
+                  potential inconsistencies in the underlying data or training.
+                </li>
+              </div>
+              <div className="flex gap-2">
+                {" "}
+                <span>◆</span>
+                <li>
+                  Extra associations suggest potential overgeneralizations or
+                  stereotypical biases present in the model's responses.
+                </li>
+              </div>
+              <div className="flex gap-2">
+                {" "}
+                <span>◆</span>
+                <li>
+                  Missing associations point to gaps in the model's
+                  understanding or representation of certain castes, which may
+                  reflect underrepresented data in training.
+                </li>
+              </div>
+            </ol>
+          </div>
+        </div>
         {/* <img
           src="../../public/brahmin_images/Brahmin_truth.png"
           className="h-[75vh] object-scale-down"

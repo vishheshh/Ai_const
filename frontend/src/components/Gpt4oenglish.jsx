@@ -81,21 +81,71 @@ function Gpt4oenglish() {
         ></iframe>
       </div>
 
-      <div className=" font-medium w-fit text-5xl mt-5 bg-[#F5F3EF] text-[#776B5D] rounded-xl dp px-4 py-2 font-bodoni">
+      <div className="font-medium w-fit text-5xl mt-5 bg-[#F5F3EF] text-[#776B5D] rounded-xl dp px-4 py-2 font-bodoni">
         GPT-4o English
       </div>
       {/* <img src="images/brahmin_english.jpeg" alt="" /> */}
       <div className="w-full h-screen mt-4 flex flex-col sm:flex-row justify-evenly items-center py-2 px-20 border-2 border-[#776B5D] rounded-xl">
+        <div className="w-2/5">
           <img
             src="../../public/brahmin_images/brahmin_bar_chart.png"
-            className="w-2/5 object-scale-down "
+            className="object-scale-down"
             alt=""
           />
-        <img
-          src="../../public/brahmin_images/Brahmin_truth.png"
-          className="w-1/2 object-scale-down"
-          alt=""
-        />
+        </div>
+        <div className="relative flex flex-col w-3/5 mt-4 ">
+          <img
+            src="../../public/brahmin_images/Brahmin_truth.png"
+            className=""
+            alt=""
+          />
+          <div className="absolute bottom-48 right-0 border-4 p-2 rounded-2xl bg-[#F5F3EF]">
+            <div className="font-bodoni mb-2 text-center text-xl">
+              Insights Derived from Caste Bias Scores in ChatGPT's Predictions
+            </div>
+            <hr className="border my-2 border-[#B0A695] w-full mx-auto" />
+            <div className="hello text-gray-800 font-[400]">
+              <ol>
+                <div className="flex gap-2 mt-1">
+                  {" "}
+                  <span>◆</span>
+                  <li>
+                    Higher scaled frequencies indicate stronger bias, showcasing
+                    the model's tendency to align certain castes more closely
+                    with specific traits or contexts.
+                  </li>
+                </div>
+                <div className="flex gap-2 font-">
+                  {" "}
+                  <span>◆</span>
+                  <li>
+                    Variability across castes highlights the differences in how
+                    ChatGPT predicts or associates particular castes, suggesting
+                    potential inconsistencies in the underlying data or
+                    training.
+                  </li>
+                </div>
+                <div className="flex gap-2">
+                  {" "}
+                  <span>◆</span>
+                  <li>
+                    Extra associations suggest potential overgeneralizations or
+                    stereotypical biases present in the model's responses.
+                  </li>
+                </div>
+                <div className="flex gap-2">
+                  {" "}
+                  <span>◆</span>
+                  <li>
+                    Missing associations point to gaps in the model's
+                    understanding or representation of certain castes, which may
+                    reflect underrepresented data in training.
+                  </li>
+                </div>
+              </ol>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="carousel-container mx-2 p-8 font-medium font-[#0F0F1F] bg-[#F5F3EF]">
