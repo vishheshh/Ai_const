@@ -88,14 +88,14 @@ function Gpt4oenglish() {
       <div className="w-full h-screen mt-4 flex flex-col sm:flex-row justify-evenly items-center py-2 px-20 border-2 border-[#776B5D] rounded-xl">
         <div className="w-2/5">
           <img
-            src="../../public/brahmin_images/brahmin_bar_chart.png"
+            src="../../brahmin_images/Brahmin_bar_chart.png"
             className="object-scale-down"
             alt=""
           />
         </div>
         <div className="relative flex flex-col w-3/5 mt-4 ">
           <img
-            src="../../public/brahmin_images/Brahmin_truth.png"
+            src="../../brahmin_images/Brahmin_truth.png"
             className=""
             alt=""
           />

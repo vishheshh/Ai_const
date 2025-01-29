@@ -1274,7 +1274,7 @@ function Homepage() {
             </div>
           </div>
 
-          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
+          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />   
 
           <div className="h-[80vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}

@@ -76,7 +76,7 @@ function Gpt4ohindi() {
       </div>
       <div className="w-full h-1/2 mt-4 flex justify-evenly items-center p-2 border-2 border-[#776B5D] rounded-xl">
         <img
-          src="../../public/images/brahmin_hindi.jpeg"
+          src="../../images/brahmin_hindi.jpeg"
           className="w-2/5 object-scale-down "
           alt=""
         />
