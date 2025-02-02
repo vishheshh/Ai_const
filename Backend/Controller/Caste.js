@@ -1,23 +1,19 @@
-import path from "path";
+import axios from "axios";
 import xlsx from "xlsx";
-import fs from "fs";
-
 
 class CasteController {
   async getCasteByCasteName(casteName, offset = 0, limit = 5) {
     try {
-      // Resolve the file path
-      // const filePath = path.resolve("./Caste Bias.xlsx");
-      // const filePath = path.resolve(process.cwd(), "Caste Bias.xlsx");
-      const filePath = path.resolve(process.cwd(), "data", "Caste Bias.xlsx");
-      // console.log(filePath);
-      // Load the Excel workbook
-      if (!fs.existsSync(filePath)) {
-        console.error("File not found:", filePath);
-        return { status: 0, msg: "File not found" };
-      }
+      const cloudinaryUrl =
+        "https://res.cloudinary.com/dwsava4sp/raw/upload/v1738505101/Caste_Bias_lzgbka.xlsx";
 
-      const workbook = xlsx.readFile(filePath);
+      // Fetch the file from Cloudinary
+      const response = await axios.get(cloudinaryUrl, {
+        responseType: "arraybuffer",
+      });
+
+      // Read workbook from buffer
+      const workbook = xlsx.read(response.data, { type: "buffer" });
 
       // Check if the sheet exists
       if (!workbook.Sheets[casteName]) {
@@ -38,7 +34,7 @@ class CasteController {
       // Return the fetched rows
       return { status: 1, data: sheetData };
     } catch (error) {
-      console.log(error);
+      console.error("Error reading data from Cloudinary:", error);
       return { status: 0, msg: "Error reading data", error: error.message };
     }
   }

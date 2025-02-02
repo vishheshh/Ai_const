@@ -8,7 +8,7 @@ import Gpt4ohindi from "../components/Gpt4ohindi";
 function CasteDetails() {
   const { casteName, model } = useParams(); // Get the dynamic parameter
   const decodedParam = decodeURIComponent(model);
-  console.log(decodedParam)
+  // console.log(decodedParam)
   return (
     <div className="w-full h-screen px-2 md:px-10">
       {decodedParam === "GPT-4o-English" && <Gpt4oenglish />}
