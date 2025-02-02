@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { useDispatch } from "react-redux";
 import { setCasteDetails } from "./reducers/caste";
 import { useNavigate } from "react-router-dom";
-const CasteCard = ({ name, photo }) => {
+const CasteCard = ({religion,name, photo }) => {
   const [showOptions, setShowOptions] = useState(false);
   const navigate = useNavigate();
 
@@ -17,14 +17,13 @@ const CasteCard = ({ name, photo }) => {
 
  const handleOptionClick = (model) => {
     // Dispatch caste details to Redux
-    dispatch(setCasteDetails({ name, photo, model }));
+    dispatch(setCasteDetails({ name, photo, model ,religion}));
     const url = `/castes/${name.toLowerCase()}/${encodeURIComponent(model)}`;
     // console.log(url)
     // window.open(url, "_blank");
     navigate(url);
     
   };
-
 
   const handleOverlayClick = (e) => {
     if (e.target.id === "overlay") {

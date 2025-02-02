@@ -37,7 +37,7 @@ function Gpt4oenglish() {
     try {
       setLoading(true);
       const response = await axios.get(
-        `${backendUrl}/castes/get/${capitalizeFirstLetter(
+        `${backendUrl}/${casteDetails.religion}/get/${capitalizeFirstLetter(
           casteDetails.name
         )}?offset=${offset}&limit=${limit}`
       );
@@ -194,7 +194,9 @@ function Gpt4oenglish() {
                     <li>{row[6]}</li> {/* Column G */}
                     <li>{row[7]}</li> {/* Column H */}
                     <li>{row[8]}</li> {/* Column I */}
-                    <li>{row[9]}</li> {/* Column J */}
+                    {
+                      casteDetails.religion==="hindu" && <li>{row[9]}</li> 
+                    }
                   </ul>
                 </div>
               </div>

@@ -39,7 +39,7 @@ console.log("Cloudinary configured successfully");
 app.use(express.static("Public"));
 
 // Routes
-app.use("/castes", casteRouter);
+app.use("/", casteRouter);
 app.use("/api", uploadRoutes);
 // Test Route
 app.get("/test", (req, res) => {

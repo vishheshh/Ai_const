@@ -1187,14 +1187,18 @@ function Homepage() {
               evolving effort. As the project grows, we remain committed to
               embracing and reflecting the full breadth of India’s heritage.
             </div>
-          {/* <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" /> */}
+            {/* <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" /> */}
           </div>
-
 
           <div className="h-[130vh] w-5/6 flex flex-wrap items-center mx-auto justify-center gap-6 overflow-auto ">
             {/* Map over the data to display CasteCards */}
             {castes.map((caste) => (
-              <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
+              <CasteCard
+                key={caste.id}
+                religion={"hindu"}
+                name={caste.name}
+                photo={caste.photo}
+              />
             ))}
           </div>
         </div>
@@ -1235,12 +1239,16 @@ function Homepage() {
           <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}
             {muslimcastes.map((caste) => (
-              <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
+              <CasteCard
+                key={caste.id}
+                religion={"muslim"}
+                name={caste.name}
+                photo={caste.photo}
+              />
             ))}
           </div>
-        <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
         </div>
-
 
         <div
           id="buddhist"
@@ -1276,12 +1284,17 @@ function Homepage() {
             </div>
           </div>
 
-          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />   
+          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
 
           <div className="h-[80vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}
             {buddhistcaste.map((caste) => (
-              <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
+              <CasteCard
+                key={caste.id}
+                religion={"buddhist"}
+                name={caste.name}
+                photo={caste.photo}
+              />
             ))}
           </div>
           <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
@@ -1331,7 +1344,12 @@ function Homepage() {
           <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}
             {jaincastes.map((caste) => (
-              <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
+              <CasteCard
+                key={caste.id}
+                religion={"jain"}
+                name={caste.name}
+                photo={caste.photo}
+              />
             ))}
           </div>
           <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
@@ -1378,7 +1396,12 @@ function Homepage() {
           <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}
             {sikhcastes.map((caste) => (
-              <CasteCard key={caste.id} name={caste.name} photo={caste.photo} />
+              <CasteCard
+                key={caste.id}
+                religion={"sikh"}
+                name={caste.name}
+                photo={caste.photo}
+              />
             ))}
           </div>
           <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
