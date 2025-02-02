@@ -47,6 +47,7 @@ const CasteCard = ({religion,name, photo }) => {
         <img
           src={photo}
           alt={name}
+          loading="lazy"
           className="w-full h-full object-cover group-hover:brightness-75 transition duration-300"
         />
       </div>
@@ -96,6 +97,7 @@ const CasteCard = ({religion,name, photo }) => {
 
             <div className="flex">
               <img
+                loading="lazy"
                 src={photo}
                 alt={name}
                 className="w-1/3 object-cover group-hover:brightness-75 transition duration-300 dp"

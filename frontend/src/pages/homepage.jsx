@@ -1089,6 +1089,7 @@ function Homepage() {
             src="images/statue.png"
             alt="wow"
             className="w-full h-full object-cover rounded-l-2xl object-center"
+            loading="lazy"
           />
         </div>
         <div
@@ -1521,6 +1522,7 @@ function Homepage() {
             src="images/designed_by_people.png"
             className="w-full h-full object-scale-down"
             alt=""
+            loading="lazy"
           />
         </div>
       </div>

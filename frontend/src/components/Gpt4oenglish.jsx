@@ -91,6 +91,7 @@ function Gpt4oenglish() {
             src="../../brahmin_images/Brahmin_bar_chart.png"
             className="object-scale-down"
             alt=""
+            loading="lazy"
           />
         </div>
         <div className="relative flex flex-col w-3/5 mt-4 ">
@@ -98,6 +99,7 @@ function Gpt4oenglish() {
             src="../../brahmin_images/Brahmin_truth.png"
             className=""
             alt=""
+            loading="lazy"
           />
           <div className="absolute bottom-48 right-0 border-4 p-2 rounded-2xl bg-[#F5F3EF]">
             <div className="font-bodoni mb-2 text-center text-xl">
@@ -194,9 +196,7 @@ function Gpt4oenglish() {
                     <li>{row[6]}</li> {/* Column G */}
                     <li>{row[7]}</li> {/* Column H */}
                     <li>{row[8]}</li> {/* Column I */}
-                    {
-                      casteDetails.religion==="hindu" && <li>{row[9]}</li> 
-                    }
+                    {casteDetails.religion === "hindu" && <li>{row[9]}</li>}
                   </ul>
                 </div>
               </div>
