@@ -6,11 +6,12 @@ class CasteController {
     try {
       // Resolve the file path
       // const filePath = path.resolve("./Caste Bias.xlsx");
-      const filePath = path.resolve(process.cwd(), "Caste Bias.xlsx");
-      // console.log(filePath);
+      // const filePath = path.resolve(process.cwd(), "Caste Bias.xlsx");
+      const filePath = path.resolve(process.cwd(), "data", "Caste Bias.xlsx");
+      console.log(filePath);
       // Load the Excel workbook
       const workbook = xlsx.readFile(filePath);
-      console.log("chamar");
+
 
       // Check if the sheet exists
       if (!workbook.Sheets[casteName]) {
