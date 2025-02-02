@@ -1,5 +1,7 @@
 import path from "path";
 import xlsx from "xlsx";
+import fs from "fs";
+
 
 class CasteController {
   async getCasteByCasteName(casteName, offset = 0, limit = 5) {
@@ -8,10 +10,14 @@ class CasteController {
       // const filePath = path.resolve("./Caste Bias.xlsx");
       // const filePath = path.resolve(process.cwd(), "Caste Bias.xlsx");
       const filePath = path.resolve(process.cwd(), "data", "Caste Bias.xlsx");
-      console.log(filePath);
+      // console.log(filePath);
       // Load the Excel workbook
-      const workbook = xlsx.readFile(filePath);
+      if (!fs.existsSync(filePath)) {
+        console.error("File not found:", filePath);
+        return { status: 0, msg: "File not found" };
+      }
 
+      const workbook = xlsx.readFile(filePath);
 
       // Check if the sheet exists
       if (!workbook.Sheets[casteName]) {
