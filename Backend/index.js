@@ -15,7 +15,11 @@ const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
 // CORS Configuration
 app.use(
   cors({
-    origin: [FRONTEND_URL, "https://ai-const.onrender.com"], 
+    origin: [
+      FRONTEND_URL,
+      "https://ai-const.onrender.com",
+      "https://www.aiconstitutionofindia.in",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,

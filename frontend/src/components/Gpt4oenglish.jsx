@@ -6,7 +6,7 @@ import axios from "axios";
 function Gpt4oenglish() {
   const casteDetails = useSelector((state) => state.caste.details);
   // console.log(casteDetails);
-  
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [data, setData] = useState([]);
   const [offset, setOffset] = useState(1);
   const [limit] = useState(5);
@@ -37,7 +37,7 @@ function Gpt4oenglish() {
     try {
       setLoading(true);
       const response = await axios.get(
-        `http://localhost:5000/castes/get/${capitalizeFirstLetter(
+        `${backendUrl}/castes/get/${capitalizeFirstLetter(
           casteDetails.name
         )}?offset=${offset}&limit=${limit}`
       );

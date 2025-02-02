@@ -900,7 +900,9 @@ function Homepage() {
     swipe: true,
     centerMode: true,
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
