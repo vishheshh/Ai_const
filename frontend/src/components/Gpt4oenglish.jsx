@@ -6,7 +6,7 @@ import axios from "axios";
 function Gpt4oenglish() {
   const casteDetails = useSelector((state) => state.caste.details);
   // console.log(casteDetails);
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  const backendUrl = import.meta.env.VITE_BACKEND_URL ||"http://localhost:5000";
   const [data, setData] = useState([]);
   const [offset, setOffset] = useState(1);
   const [limit] = useState(5);

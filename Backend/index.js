@@ -9,8 +9,7 @@ app.use(express.json());
 
 // Environment Variables
 const PORT = process.env.PORT || 5000;
-const DB_URI = process.env.DB_URI;
-const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173"; 
+const FRONTEND_URL =  "http://localhost:5173"; 
 
 // CORS Configuration
 app.use(
