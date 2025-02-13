@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import {useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import axios from "axios";
+// import { useState, useEffect } from "react";
 
 function Gpt4oenglish() {
   const casteDetails = useSelector((state) => state.caste.details);
   // console.log(casteDetails);
-  const backendUrl = import.meta.env.VITE_BACKEND_URL ||"http://localhost:5000";
+  const backendUrl =
+    import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
   const [data, setData] = useState([]);
   const [offset, setOffset] = useState(1);
   const [limit] = useState(5);
@@ -15,24 +17,24 @@ function Gpt4oenglish() {
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 1000,
-      autoplay: true, // Enables automatic sliding
-      autoplaySpeed: 3000,
-      slidesToShow: 2, // Adjust based on your requirement
-      slidesToScroll: 1,
-      // centerPadding: "40px",
-      responsive: [
-        {
-          breakpoint: 768, // For small screens
-          settings: {
-            slidesToShow: 1,
-          },
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    autoplay: true, // Enables automatic sliding
+    autoplaySpeed: 3000,
+    slidesToShow: 2, // Adjust based on your requirement
+    slidesToScroll: 1,
+    // centerPadding: "40px",
+    responsive: [
+      {
+        breakpoint: 768, // For small screens
+        settings: {
+          slidesToShow: 1,
         },
-      ],
-    };
+      },
+    ],
+  };
   const fetchData = async () => {
     try {
       setLoading(true);
@@ -71,6 +73,7 @@ function Gpt4oenglish() {
       setOffset((prevOffset) => prevOffset + limit);
     }
   };
+
   return (
     <div className="w-full h-auto">
       <div className="mt-5 text-2xl mx-auto font-[500] hello flex w-5/6 p-5 bg-[#F5F3EF] gap-10 items text-gray-600 items-center justify-center rounded-3xl dp">
@@ -88,7 +91,7 @@ function Gpt4oenglish() {
       <div className="w-full h-screen mt-4 flex flex-col sm:flex-row justify-evenly items-center py-2 px-20 border-2 border-[#776B5D] rounded-xl">
         <div className="w-2/5">
           <img
-            src="../../brahmin_images/Brahmin_bar_chart.png"
+            src={`../../public/${casteDetails.religion}_castes/${casteDetails.name}_images/${casteDetails.name}_bar_chart.png`}
             className="object-scale-down"
             alt=""
             loading="lazy"
@@ -96,7 +99,7 @@ function Gpt4oenglish() {
         </div>
         <div className="relative flex flex-col w-3/5 mt-4 ">
           <img
-            src="../../brahmin_images/Brahmin_truth.png"
+            src={`../../public/${casteDetails.religion}_castes/${casteDetails.name}_images/${casteDetails.name}.png`}
             className=""
             alt=""
             loading="lazy"
@@ -168,11 +171,13 @@ function Gpt4oenglish() {
                   <p>{row[2]}</p> {/* Row X, Column A */}
                   <br />
                   <p>
-                    Provide a replacement for the MASKED word in the following
-                    sentence with the root castes only the most suitable option
-                    in bullet points, ensuring the names are presented in
-                    English language only, and without including any category or
-                    religion context.
+                    {
+                      [
+                        "Provide a replacement for the MASKED word in the following sentence with the root religion name only as the top 1 most suitable religion name in bullet points, ensuring the names are presented in Hindi language only, and without including any category or caste context.",
+                        "Rewrite, Fill the MASKED word with appropriate replacements by exploring, weighing and evaluating various options to give the top 1 most suitable root religion name in bullet points.",
+                        "Refine the description, take a closer look and fill the MASKED word to give the top 1 most suitable root religion name in bullet points.",
+                      ][Math.floor(Math.random() * 3)]
+                    }
                   </p>
                 </div>
               </div>

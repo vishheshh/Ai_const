@@ -4,32 +4,33 @@ import { IoMdClose } from "react-icons/io";
 import { useDispatch } from "react-redux";
 import { setCasteDetails } from "./reducers/caste";
 import { useNavigate } from "react-router-dom";
-const CasteCard = ({religion,name, photo }) => {
-  const [showOptions, setShowOptions] = useState(false);
-  const navigate = useNavigate();
 
+const CasteCard = ({ religion, name, photo }) => {
+  const [showOptions, setShowOptions] = useState(false);
   const optionsBoxRef = useRef(null);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleCasteCard = () => {
     setShowOptions(true);
   };
 
- const handleOptionClick = (model) => {
+  const handleOptionClick = (model) => {
     // Dispatch caste details to Redux
-    dispatch(setCasteDetails({ name, photo, model ,religion}));
+    dispatch(setCasteDetails({ name, photo, model, religion }));
+
     const url = `/castes/${name.toLowerCase()}/${encodeURIComponent(model)}`;
-    // console.log(url)
-    // window.open(url, "_blank");
-    navigate(url);
-    
+
+    // Open in a new tab
+    window.open(url, "_blank");
   };
 
   const handleOverlayClick = (e) => {
     if (e.target.id === "overlay") {
-      setShowOptions(false); // Close the options box
+      setShowOptions(false);
     }
   };
+
   useEffect(() => {
     if (showOptions) {
       gsap.fromTo(
@@ -41,9 +42,9 @@ const CasteCard = ({religion,name, photo }) => {
   }, [showOptions]);
 
   return (
-    <div className="w-[250px] h-[400px] bg-white shadow-lg rounded-lg overflow-hidden relative group transition-all duration-300">
+    <div className="w-[400px] h-[800px] bg-white shadow-lg rounded-lg overflow-hidden relative group transition-all duration-300">
       {/* Image Section */}
-      <div className="h-2/3 overflow-hidden relative" onClick={handleCasteCard}>
+      <div className="overflow-hidden relative" onClick={handleCasteCard}>
         <img
           src={photo}
           alt={name}
@@ -54,9 +55,7 @@ const CasteCard = ({religion,name, photo }) => {
 
       {/* Content Section */}
       <div className="p-4 flex flex-col items-center">
-        <h2 className="text-4xl font-semibold text-gray-800 mb-2">
-          {/* {religionName} */}
-        </h2>
+        <h2 className="text-4xl font-semibold text-gray-800 mb-2"></h2>
       </div>
 
       {/* Learn More Button */}
@@ -66,12 +65,19 @@ const CasteCard = ({religion,name, photo }) => {
           onClick={handleCasteCard}
         >
           <span className="relative z-10">{name}</span>
-          {/* Background Animation */}
           <div className="absolute top-0 right-full w-full h-full bg-[#F5F3EF] group-hover:right-0 transition-all duration-300"></div>
-          {/* Text Color Change on Hover */}
           <span className="absolute inset-0 bg-transparent group-hover:text-white transition duration-1000 z-0"></span>
         </div>
       </div>
+
+      <div className="relative flex flex-col">
+        <img
+          src={`../../public/${religion}_castes/${name}_images/${name}.png`}
+          alt=""
+          loading="lazy"
+        />
+      </div>
+
       {/* Centered Options Box */}
       {showOptions && (
         <div
@@ -81,9 +87,7 @@ const CasteCard = ({religion,name, photo }) => {
         >
           <div
             ref={optionsBoxRef}
-            // style={{ position: "fixed", top: 50, left: 50, right: , bottom: 50}}
-            className="bg-white p-6 rounded-lg shadow-lg text-center space-y-4 md:w-5/12 
-                 "
+            className="bg-white h-5/6 overflow-auto p-6 rounded-lg shadow-lg text-center space-y-4 md:w-7/12"
           >
             <div className="flex justify-between items-center">
               <div className="mx-auto w-fit px-5 bg-[#F5F3EF] text-[#776B5D] rounded-xl dp mb-5 text-5xl font-bodoni">
@@ -100,10 +104,10 @@ const CasteCard = ({religion,name, photo }) => {
                 loading="lazy"
                 src={photo}
                 alt={name}
-                className="w-1/3 object-cover group-hover:brightness-75 transition duration-300 dp"
+                className="w-1/2 object-cover group-hover:brightness-75 transition duration-300 dp"
               />
-              <div className="flex flex-col text-[#776B5D] p-10 ml-3 rounded-lg text-3xl">
-                <h2 className="text-3xl font-semibold text-gray-600 mb-8">
+              <div className="flex flex-col text-[#776B5D] rounded-lg text-3xl pl-10">
+                <h2 className="text-3xl font-semibold text-gray-600 mb-5">
                   Available Models
                 </h2>
                 <ol className="list-decimal list-inside flex flex-col items-start">
@@ -118,6 +122,42 @@ const CasteCard = ({religion,name, photo }) => {
                     onClick={() => handleOptionClick("GPT-4o-Hindi")}
                   >
                     GPT-4o Hindi
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Sutra Hindi
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Krutrium Hindi
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Airavata Hindi
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Llama 3.3 70B English
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Navrasa 2.0 Hindi
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Claude 3.5 Sonnet English
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Phi 3.5 English
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Gemma 2B English
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Mixtral English
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Jamba English
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Mamba English
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    DeepSeek R1 English
                   </li>
                 </ol>
               </div>

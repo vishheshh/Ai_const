@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import Slider from "react-slick";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 function Gpt4ohindi() {
+  const casteDetails = useSelector((state) => state.caste.details);
   const { casteName, model } = useParams();
   const [data, setData] = useState([]);
   const [offset, setOffset] = useState(1);
@@ -59,9 +62,9 @@ function Gpt4ohindi() {
       },
     ],
   };
-    const capitalizeFirstLetter = (string) => {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    };
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
   return (
     <div className="w-full h-auto">
       <div className="mt-5 text-2xl mx-auto font-[500] hello flex w-5/6 p-5 bg-[#F5F3EF] gap-10 items text-gray-600 items-center justify-center rounded-3xl dp">
@@ -76,7 +79,7 @@ function Gpt4ohindi() {
       </div>
       <div className="w-full h-1/2 mt-4 flex justify-evenly items-center p-2 border-2 border-[#776B5D] rounded-xl">
         <img
-          src="../../images/brahmin_hindi.jpeg"
+          src={`../../public/${casteDetails.religion}_castes/${casteDetails.name}_images/${casteDetails.name}_bar_chart_hindi.png`}
           className="w-2/5 object-scale-down "
           alt=""
         />
