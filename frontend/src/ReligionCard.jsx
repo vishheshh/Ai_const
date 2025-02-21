@@ -73,7 +73,7 @@ const ReligionCard = ({ key, image, religionName }) => {
 
       <div className="relative flex flex-col">
         <img
-          src={`/religions/${religionName}_images/${religionName}.png`}
+          src={`/religions/${religionName.charAt(0).toLowerCase() + religionName.slice(1)}_images/${religionName}.png`}
           alt=""
           loading="lazy"
         />
