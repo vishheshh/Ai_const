@@ -73,7 +73,7 @@ const CasteCard = ({ religion, name, photo }) => {
 
       <div className="relative flex flex-col">
         <img
-          src={`../public/${religion}_castes/${name}_images/${name}.png`}
+          src={`public/${religion}_castes/${name}_images/${name}.png`}
           alt=""
           loading="lazy"
         />
