@@ -3,8 +3,9 @@ import CasteController from "../Controller/Caste.js";
 
 const casteRouter = Router();
 
-casteRouter.get("/hindu/get/:casteName", async (req, res) => {
+casteRouter.get("/hindus/get/:casteName", async (req, res) => {
   const { religionName,casteName } = req.params;
+  console.log(religionName)
   const { offset = 0, limit = 20 } = req.query; // Default offset: 0, limit: 20
   try {
     const result = await new CasteController().getHindu(

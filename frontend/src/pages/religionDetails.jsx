@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Gpt4oenglish from "../components/castes/Gpt4oenglish";
-import Gpt4ohindi from "../components/castes/Gpt4ohindi";
+import Gpt4oenglish from "../components/religions/Gpt4oenglish";
+import Gpt4ohindi from "../components/religions/Gpt4ohindi";
 
-function CasteDetails() {
-  const { casteName, model } = useParams(); // Get the dynamic parameter
+function ReligionDetails() {
+  const { name, model } = useParams(); // Get the dynamic parameter
   const decodedParam = decodeURIComponent(model);
-  console.log(decodedParam)
+  // console.log(decodedParam)
   return (
     <div className="w-full h-screen px-2 md:px-10">
       {decodedParam === "GPT-4o-English" && <Gpt4oenglish />}
@@ -30,4 +30,4 @@ function CasteDetails() {
   );
 }
 
-export default CasteDetails;
+export default ReligionDetails;

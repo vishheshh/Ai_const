@@ -22,7 +22,8 @@ const CasteCard = ({ religion, name, photo }) => {
     const url = `/castes/${name.toLowerCase()}/${encodeURIComponent(model)}`;
 
     // Open in a new tab
-    window.open(url, "_blank");
+    // window.open(url, "_blank");
+    window.location.href = url;
   };
 
   const handleOverlayClick = (e) => {
@@ -72,7 +73,7 @@ const CasteCard = ({ religion, name, photo }) => {
 
       <div className="relative flex flex-col">
         <img
-          src={`../../public/${religion}_castes/${name}_images/${name}.png`}
+          src={`../public/${religion}_castes/${name}_images/${name}.png`}
           alt=""
           loading="lazy"
         />

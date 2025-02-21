@@ -5,7 +5,7 @@ import axios from "axios";
 // import { useState, useEffect } from "react";
 
 function Gpt4oenglish() {
-  const casteDetails = useSelector((state) => state.caste.details);
+  const religionDetails = useSelector((state) => state.religion.details);
   // console.log(casteDetails);
   const backendUrl =
     import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
@@ -39,8 +39,8 @@ function Gpt4oenglish() {
     try {
       setLoading(true);
       const response = await axios.get(
-        `${backendUrl}/${casteDetails.religion}/get/${capitalizeFirstLetter(
-          casteDetails.name
+        `${backendUrl}/get/${capitalizeFirstLetter(
+          religionDetails.name
         )}?offset=${offset}&limit=${limit}`
       );
 
@@ -78,7 +78,7 @@ function Gpt4oenglish() {
     <div className="w-full h-auto">
       <div className="mt-5 text-2xl mx-auto font-[500] hello flex w-5/6 p-5 bg-[#F5F3EF] gap-10 items text-gray-600 items-center justify-center rounded-3xl dp">
         <iframe
-          src="https://en.wikipedia.org/wiki/Brahmin"
+          src={data[0][0]}
           title="Wikipedia Page"
           style={{ width: "100%", height: "60vh", border: "none" }}
         ></iframe>
@@ -91,7 +91,7 @@ function Gpt4oenglish() {
       <div className="w-full h-screen mt-4 flex flex-col sm:flex-row justify-evenly items-center py-2 px-20 border-2 border-[#776B5D] rounded-xl">
         <div className="w-2/5">
           <img
-            src={`../../public/${casteDetails.religion}_castes/${casteDetails.name}_images/${casteDetails.name}_bar_chart.png`}
+            src={`../../public/religions/${religionDetails.name}_images/${religionDetails.name}_bar_chart.png`}
             className="object-scale-down"
             alt=""
             loading="lazy"
@@ -99,7 +99,7 @@ function Gpt4oenglish() {
         </div>
         <div className="relative flex flex-col w-3/5 mt-4 ">
           <img
-            src={`../../public/${casteDetails.religion}_castes/${casteDetails.name}_images/${casteDetails.name}.png`}
+            src={`../../public/religions/${religionDetails.name}_images/${religionDetails.name}.png`}
             className=""
             alt=""
             loading="lazy"
@@ -168,7 +168,7 @@ function Gpt4oenglish() {
               <div className="flex">
                 {/* Prompt Section */}
                 <div className="prompt w-2/3 font-semibold bg-[#ECECEC] rounded-xl ml-auto p-4">
-                  <p>{row[2]}</p> {/* Row X, Column A */}
+                  <p>{row[2]}</p> {/* Column C*/}
                   <br />
                   <p>
                     {
@@ -197,11 +197,11 @@ function Gpt4oenglish() {
                 </svg>
                 <div className="flex flex-col">
                   <ul className="list-disc ml-6">
-                    <li>{row[4]}</li> {/* Column E */}
+                    <li>{row[5]}</li> {/* Column F */}
                     <li>{row[6]}</li> {/* Column G */}
                     <li>{row[7]}</li> {/* Column H */}
                     <li>{row[8]}</li> {/* Column I */}
-                    {casteDetails.religion === "hindu" && <li>{row[9]}</li>}
+                    <li>{row[9]}</li>  {/* Column J */}
                   </ul>
                 </div>
               </div>

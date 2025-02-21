@@ -14,138 +14,13 @@ function Homepage() {
   const imageRef = useRef(null);
   const textRef = useRef(null);
   const textContainerRef = useRef(null);
-  const castes = [
+
+  const hinduscastes1 = [
     {
       id: 1,
       name: "Brahmin",
       photo: "images/hindu-caste-images/Brahmin.png",
       description: "Brahmin",
-    },
-    {
-      id: 2,
-      name: "Vaishya",
-      photo: "images/hindu-caste-images/Vaishya.png",
-      description: "Vaishyas",
-    },
-    {
-      id: 3,
-      name: "Bania",
-      photo: "images/hindu-caste-images/Bania.png",
-      description: "Banias",
-    },
-    {
-      id: 4,
-      name: "Rajput",
-      photo: "images/hindu-caste-images/Rajput.png",
-      description: "Rajputs",
-    },
-    {
-      id: 5,
-      name: "Shudra",
-      photo: "images/hindu-caste-images/Shudra.png",
-      description: "Shudras",
-    },
-    {
-      id: 6,
-      name: "Dalit",
-      photo: "images/hindu-caste-images/Dalits.png",
-      description: "Dalits",
-    },
-    {
-      id: 7,
-      name: "Kayastha",
-      photo: "images/hindu-caste-images/Kayastha.png",
-      description: "Kayastha",
-    },
-    {
-      id: 8,
-      name: "Yadav",
-      photo: "images/hindu-caste-images/Yadav.png",
-      description: "Yadav",
-    },
-    {
-      id: 9,
-      name: "Kurmi",
-      photo: "images/hindu-caste-images/Kurmi.png",
-      description: "Kurmi",
-    },
-    {
-      id: 10,
-      name: "Jat",
-      photo: "images/hindu-caste-images/Jat.png",
-      description: "Jats",
-    },
-    {
-      id: 11,
-      name: "Maratha",
-      photo: "images/hindu-caste-images/Maratha.png",
-      description: "Marathas",
-    },
-    {
-      id: 12,
-      name: "Lingayat",
-      photo: "images/hindu-caste-images/Lingayat.png",
-      description: "Lingayats",
-    },
-    {
-      id: 13,
-      name: "Nair",
-      photo: "images/hindu-caste-images/Nair.png",
-      description: "Nairs",
-    },
-    {
-      id: 14,
-      name: "Vokkaliga",
-      photo: "images/hindu-caste-images/Vokkaliga.png",
-      description: "Vokkaligas",
-    },
-    {
-      id: 15,
-      name: "Reddy",
-      photo: "images/hindu-caste-images/Reddy.png",
-      description: "Reddys",
-    },
-    {
-      id: 16,
-      name: "Kapu",
-      photo: "images/hindu-caste-images/Kapu.png",
-      description: "Kapus",
-    },
-    {
-      id: 17,
-      name: "Thakur",
-      photo: "images/hindu-caste-images/Thakur.png",
-      description: "Thakurs",
-    },
-    {
-      id: 18,
-      name: "Patel",
-      photo: "images/hindu-caste-images/Patel.png",
-      description: "Patels",
-    },
-    {
-      id: 19,
-      name: "Koli",
-      photo: "images/hindu-caste-images/Koli.png",
-      description: "Kolis",
-    },
-    {
-      id: 20,
-      name: "Chettiar",
-      photo: "images/hindu-caste-images/Chettiar.png",
-      description: "Chettiars",
-    },
-    {
-      id: 21,
-      name: "Gounder",
-      photo: "images/hindu-caste-images/Gounder.png",
-      description: "Gounders",
-    },
-    {
-      id: 22,
-      name: "Vanniyar",
-      photo: "images/hindu-caste-images/Vanniyar.png",
-      description: "Vanniyars",
     },
     {
       id: 23,
@@ -160,16 +35,10 @@ function Homepage() {
       description: "Iyers",
     },
     {
-      id: 25,
-      name: "Ezhava",
-      photo: "images/hindu-caste-images/Ezhava.png",
-      description: "Ezhavas",
-    },
-    {
-      id: 26,
-      name: "Gounder",
-      photo: "images/hindu-caste-images/Gounder.png",
-      description: "Gounders",
+      id: 59,
+      name: "Purohit",
+      photo: "images/hindu-caste-images/Purohit.png",
+      description: "Purohits",
     },
     {
       id: 27,
@@ -177,47 +46,92 @@ function Homepage() {
       photo: "images/hindu-caste-images/Bhumihar.png",
       description: "Bhumihars",
     },
+  ]
+
+  const hinduscastes2 = [
     {
-      id: 28,
-      name: "Kamma",
-      photo: "images/hindu-caste-images/Kamma.png",
-      description: "Kammas",
+      id: 65,
+      name: "Kshatriya",
+      photo: "images/hindu-caste-images/Kshatriyas.png",
+      description: "Kshatriyas",
     },
     {
-      id: 29,
-      name: "Teli",
-      photo: "images/hindu-caste-images/Teli.png",
-      description: "Telis",
+      id: 4,
+      name: "Rajput",
+      photo: "images/hindu-caste-images/Rajput.png",
+      description: "Rajputs",
     },
     {
-      id: 30,
-      name: "Chamar",
-      photo: "images/hindu-caste-images/Chamar.png",
-      description: "Chamars",
+      id: 11,
+      name: "Maratha",
+      photo: "images/hindu-caste-images/Maratha.png",
+      description: "Marathas",
     },
     {
-      id: 31,
-      name: "Meena",
-      photo: "images/hindu-caste-images/Meena.png",
-      description: "Meenas",
+      id: 17,
+      name: "Thakur",
+      photo: "images/hindu-caste-images/Thakur.png",
+      description: "Thakurs",
     },
     {
-      id: 32,
-      name: "Bhil",
-      photo: "images/hindu-caste-images/Bhil.png",
-      description: "Bhils",
+      id: 50,
+      name: "Khandayat",
+      photo: "images/hindu-caste-images/Khandayat .png",
+      description: "Khandayats",
     },
     {
-      id: 33,
-      name: "Gujjar",
-      photo: "images/hindu-caste-images/Gujjar.png",
-      description: "Gujjars",
+      id: 57,
+      name: "Khatri",
+      photo: "images/hindu-caste-images/Khatri.png",
+      description: "Khatris",
+    },
+  ]
+
+  const hinduscastes3 = [
+    {
+      id: 2,
+      name: "Vaishya",
+      photo: "images/hindu-caste-images/Vaishya.png",
+      description: "Vaishyas",
     },
     {
-      id: 34,
-      name: "Mahar",
-      photo: "images/hindu-caste-images/Mahar.png",
-      description: "Mahars",
+      id: 3,
+      name: "Bania",
+      photo: "images/hindu-caste-images/Bania.png",
+      description: "Banias",
+    },
+    {
+      id: 67,
+      name: "Agrahari",
+      photo: "images/hindu-caste-images/Agrahari.png",
+      description: "Agraharis",
+    },
+    {
+      id: 20,
+      name: "Chettiar",
+      photo: "images/hindu-caste-images/Chettiar.png",
+      description: "Chettiars",
+    },
+    {
+      id: 48,
+      name: "Halwai",
+      photo: "images/hindu-caste-images/Halwai.png",
+      description: "Halwais",
+    },
+    {
+      id: 46,
+      name: "Sahu",
+      photo: "images/hindu-caste-images/Sahu.png",
+      description: "Sahus",
+    },
+  ]
+
+  const hinduscastes4 = [
+    {
+      id: 5,
+      name: "Shudra",
+      photo: "images/hindu-caste-images/Shudra.png",
+      description: "Shudras",
     },
     {
       id: 35,
@@ -226,40 +140,78 @@ function Homepage() {
       description: "Ahirs",
     },
     {
-      id: 36,
-      name: "Mala",
-      photo: "images/hindu-caste-images/Mala.png",
-      description: "Malas",
+      id: 64,
+      name: "Barai",
+      photo: "images/hindu-caste-images/Barai.png",
+      description: "Barais",
     },
     {
-      id: 37,
-      name: "Madiga",
-      photo: "images/hindu-caste-images/Madiga.png",
-      description: "Madigas",
+      id: 62,
+      name: "Billava",
+      photo: "images/hindu-caste-images/Billava.png",
+      description: "Billavas",
     },
     {
-      id: 38,
-      name: "Pasi",
-      photo: "images/hindu-caste-images/Pasi.png",
-      description: "Pasis",
+      id: 45,
+      name: "Dhobi",
+      photo: "images/hindu-caste-images/Dhobi.png",
+      description: "Dhobis",
+    },
+    
+    {
+      id: 47,
+      name: "Sutar",
+      photo: "images/hindu-caste-images/Sutar.png",
+      description: "Sutars",
     },
     {
-      id: 39,
-      name: "Valmiki",
-      photo: "images/hindu-caste-images/Valmiki.png",
-      description: "Valmikis",
+      id: 49,
+      name: "Sonar",
+      photo: "images/hindu-caste-images/Sonar.png",
+      description: "Sonars",
     },
     {
-      id: 40,
-      name: "Jatav",
-      photo: "images/hindu-caste-images/Jatav.png",
-      description: "Jatavs",
+      id: 21,
+      name: "Gounder",
+      photo: "images/hindu-caste-images/Gounder.png",
+      description: "Gounders",
     },
     {
-      id: 41,
-      name: "Khatik",
-      photo: "images/hindu-caste-images/Khatik.png",
-      description: "Khatiks",
+      id: 54,
+      name: "Jangid",
+      photo: "images/hindu-caste-images/Jangid.png",
+      description: "Jangids",
+    },
+    {
+      id: 55,
+      name: "Lohar",
+      photo: "images/hindu-caste-images/Lohar.png",
+      description: "Lohars",
+    },
+    {
+      id: 9,
+      name: "Kurmi",
+      photo: "images/hindu-caste-images/Kurmi.png",
+      description: "Kurmi",
+    },
+    {
+      id: 10,
+      name: "Jat",
+      photo: "images/hindu-caste-images/Jat.png",
+      description: "Jats",
+    },
+    
+    {
+      id: 12,
+      name: "Lingayat",
+      photo: "images/hindu-caste-images/Lingayat.png",
+      description: "Lingayats",
+    },
+    {
+      id: 13,
+      name: "Nair",
+      photo: "images/hindu-caste-images/Nair.png",
+      description: "Nairs",
     },
     {
       id: 42,
@@ -280,41 +232,185 @@ function Homepage() {
       description: "Nais",
     },
     {
-      id: 45,
-      name: "Dhobi",
-      photo: "images/hindu-caste-images/Dhobi.png",
-      description: "Dhobis",
+      id: 18,
+      name: "Patel",
+      photo: "images/hindu-caste-images/Patel.png",
+      description: "Patels",
     },
     {
-      id: 46,
-      name: "Sahu",
-      photo: "images/hindu-caste-images/Sahu.png",
-      description: "Sahus",
+      id: 15,
+      name: "Reddy",
+      photo: "images/hindu-caste-images/Reddy.png",
+      description: "Reddys",
+    },
+  ]
+
+  const hinduscastes5 = [
+    {
+      id: 6,
+      name: "Dalit",
+      photo: "images/hindu-caste-images/Dalits.png",
+      description: "Dalits",
     },
     {
-      id: 47,
-      name: "Sutar",
-      photo: "images/hindu-caste-images/Sutar.png",
-      description: "Sutars",
+      id: 58,
+      name: "Bagdi",
+      photo: "images/hindu-caste-images/Bagdi.png",
+      description: "Bagdis",
     },
     {
-      id: 48,
-      name: "Halwai",
-      photo: "images/hindu-caste-images/Halwai.png",
-      description: "Halwais",
+      id: 30,
+      name: "Chamar",
+      photo: "images/hindu-caste-images/Chamar.png",
+      description: "Chamars",
     },
     {
-      id: 49,
-      name: "Sonar",
-      photo: "images/hindu-caste-images/Sonar.png",
-      description: "Sonars",
+      id: 70,
+      name: "Dharkar",
+      photo: "images/hindu-caste-images/Dharkar.png",
+      description: "Dharkars",
     },
     {
-      id: 50,
-      name: "Khandayat",
-      photo: "images/hindu-caste-images/Khandayat .png",
-      description: "Khandayats",
+      id: 68,
+      name: "Dhimar",
+      photo: "images/hindu-caste-images/Dhimar.png",
+      description: "Dhimars",
     },
+    {
+      id: 39,
+      name: "Valmiki",
+      photo: "images/hindu-caste-images/Valmiki.png",
+      description: "Valmikis",
+    },
+    {
+      id: 40,
+      name: "Jatav",
+      photo: "images/hindu-caste-images/Jatav.png",
+      description: "Jatavs",
+    },
+    {
+      id: 41,
+      name: "Khatik",
+      photo: "images/hindu-caste-images/Khatik.png",
+      description: "Khatiks",
+    },
+    {
+      id: 34,
+      name: "Mahar",
+      photo: "images/hindu-caste-images/Mahar.png",
+      description: "Mahars",
+    },
+    
+    {
+      id: 36,
+      name: "Mala",
+      photo: "images/hindu-caste-images/Mala.png",
+      description: "Malas",
+    },
+    {
+      id: 37,
+      name: "Madiga",
+      photo: "images/hindu-caste-images/Madiga.png",
+      description: "Madigas",
+    },
+    {
+      id: 38,
+      name: "Pasi",
+      photo: "images/hindu-caste-images/Pasi.png",
+      description: "Pasis",
+    },
+  ]
+
+  const hinduscastes6 = [
+    {
+      id: 31,
+      name: "Meena",
+      photo: "images/hindu-caste-images/Meena.png",
+      description: "Meenas",
+    },
+    {
+      id: 32,
+      name: "Bhil",
+      photo: "images/hindu-caste-images/Bhil.png",
+      description: "Bhils",
+    },
+  ]
+
+  const hinduscastes7 = [
+    {
+      id: 7,
+      name: "Kayastha",
+      photo: "images/hindu-caste-images/Kayastha.png",
+      description: "Kayastha",
+    },
+    {
+      id: 8,
+      name: "Yadav",
+      photo: "images/hindu-caste-images/Yadav.png",
+      description: "Yadav",
+    },
+    
+    {
+      id: 14,
+      name: "Vokkaliga",
+      photo: "images/hindu-caste-images/Vokkaliga.png",
+      description: "Vokkaligas",
+    },
+    
+    {
+      id: 16,
+      name: "Kapu",
+      photo: "images/hindu-caste-images/Kapu.png",
+      description: "Kapus",
+    },
+    {
+      id: 19,
+      name: "Koli",
+      photo: "images/hindu-caste-images/Koli.png",
+      description: "Kolis",
+    },
+    
+    {
+      id: 22,
+      name: "Vanniyar",
+      photo: "images/hindu-caste-images/Vanniyar.png",
+      description: "Vanniyars",
+    },
+    
+    {
+      id: 25,
+      name: "Ezhava",
+      photo: "images/hindu-caste-images/Ezhava.png",
+      description: "Ezhavas",
+    },
+    {
+      id: 26,
+      name: "Gounder",
+      photo: "images/hindu-caste-images/Gounder.png",
+      description: "Gounders",
+    },
+    
+    {
+      id: 28,
+      name: "Kamma",
+      photo: "images/hindu-caste-images/Kamma.png",
+      description: "Kammas",
+    },
+    {
+      id: 29,
+      name: "Teli",
+      photo: "images/hindu-caste-images/Teli.png",
+      description: "Telis",
+    },
+    
+    
+    {
+      id: 33,
+      name: "Gujjar",
+      photo: "images/hindu-caste-images/Gujjar.png",
+      description: "Gujjars",
+    },
+    
     {
       id: 51,
       name: "Devanga",
@@ -334,41 +430,14 @@ function Homepage() {
       description: "Mahishyas",
     },
     {
-      id: 54,
-      name: "Jangid",
-      photo: "images/hindu-caste-images/Jangid.png",
-      description: "Jangids",
-    },
-    {
-      id: 55,
-      name: "Lohar",
-      photo: "images/hindu-caste-images/Lohar.png",
-      description: "Lohars",
-    },
-    {
       id: 56,
       name: "Pallar",
       photo: "images/hindu-caste-images/Pallar.png",
       description: "Pallars",
     },
-    {
-      id: 57,
-      name: "Khatri",
-      photo: "images/hindu-caste-images/Khatri.png",
-      description: "Khatris",
-    },
-    {
-      id: 58,
-      name: "Bagdi",
-      photo: "images/hindu-caste-images/Bagdi.png",
-      description: "Bagdis",
-    },
-    {
-      id: 59,
-      name: "Purohit",
-      photo: "images/hindu-caste-images/Purohit.png",
-      description: "Purohits",
-    },
+    
+    
+    
     {
       id: 60,
       name: "Arain",
@@ -381,117 +450,31 @@ function Homepage() {
       photo: "images/hindu-caste-images/Ghosi.png",
       description: "Ghosis",
     },
-    {
-      id: 62,
-      name: "Billava",
-      photo: "images/hindu-caste-images/Billava.png",
-      description: "Billavas",
-    },
+    
     {
       id: 63,
       name: "Bairagi",
       photo: "images/hindu-caste-images/Bairagi.png",
       description: "Bairagis",
     },
-    {
-      id: 64,
-      name: "Barai",
-      photo: "images/hindu-caste-images/Barai.png",
-      description: "Barais",
-    },
-    {
-      id: 65,
-      name: "Kshatriya",
-      photo: "images/hindu-caste-images/Kshatriyas.png",
-      description: "Kshatriyas",
-    },
+    
+    
     {
       id: 66,
       name: "Tanti",
       photo: "images/hindu-caste-images/Tanti.png",
       description: "Tantis",
     },
-    {
-      id: 67,
-      name: "Agrahari",
-      photo: "images/hindu-caste-images/Agrahari.png",
-      description: "Agraharis",
-    },
-    {
-      id: 68,
-      name: "Dhimar",
-      photo: "images/hindu-caste-images/Dhimar.png",
-      description: "Dhimars",
-    },
+    
     {
       id: 69,
       name: "Patwa",
       photo: "images/hindu-caste-images/Patwa.png",
       description: "Patwas",
     },
-    {
-      id: 70,
-      name: "Dharkar",
-      photo: "images/hindu-caste-images/Dharkar.png",
-      description: "Dharkars",
-    },
-  ];
+  ]
 
-  const muslimcastes = [
-    {
-      id: 1,
-      name: "Ansari",
-      photo: "images/muslim-caste-images/Ansari.png",
-      description: "Ansari",
-    },
-    {
-      id: 2,
-      name: "Attar",
-      photo: "images/muslim-caste-images/Attar.png",
-      description: "Attar",
-    },
-    {
-      id: 3,
-      name: "Bhangi",
-      photo: "images/muslim-caste-images/Bhangi.png",
-      description: "Bhangi",
-    },
-    {
-      id: 4,
-      name: "Chishti",
-      photo: "images/muslim-caste-images/Chishti.png",
-      description: "Chishti",
-    },
-    {
-      id: 5,
-      name: "Faqir",
-      photo: "images/muslim-caste-images/Faqir.png",
-      description: "Faqir",
-    },
-    {
-      id: 6,
-      name: "Garadi",
-      photo: "images/muslim-caste-images/Garadi.png",
-      description: "Garadi",
-    },
-    {
-      id: 7,
-      name: "Idrisi",
-      photo: "images/muslim-caste-images/Idrisi.png",
-      description: "Idrisi",
-    },
-    {
-      id: 8,
-      name: "Kalal",
-      photo: "images/muslim-caste-images/Kalal.png",
-      description: "Kalal",
-    },
-    {
-      id: 9,
-      name: "Mansoori",
-      photo: "images/muslim-caste-images/Mansoori.png",
-      description: "Mansoori",
-    },
+  const muslimcastes1 = [
     {
       id: 10,
       name: "Mirza",
@@ -511,34 +494,10 @@ function Homepage() {
       description: "Pathan",
     },
     {
-      id: 13,
-      name: "Pirzada",
-      photo: "images/muslim-caste-images/Pirzada.png",
-      description: "Pirzada",
-    },
-    {
-      id: 14,
-      name: "Qureshi",
-      photo: "images/muslim-caste-images/Qureshi.png",
-      description: "Qureshi",
-    },
-    {
-      id: 15,
-      name: "Salmani",
-      photo: "images/muslim-caste-images/Salmani.png",
-      description: "Salmani",
-    },
-    {
       id: 16,
       name: "Sheikh",
       photo: "images/muslim-caste-images/Sheikh.png",
       description: "Sheikh",
-    },
-    {
-      id: 17,
-      name: "Siddi",
-      photo: "images/muslim-caste-images/Siddi.png",
-      description: "Siddi",
     },
     {
       id: 18,
@@ -548,37 +507,98 @@ function Homepage() {
     },
   ];
 
-  const jaincastes = [
+  const muslimcastes2 = [
+    {
+      id: 1,
+      name: "Ansari",
+      photo: "images/muslim-caste-images/Ansari.png",
+      description: "Ansari",
+    },
+    {
+      id: 2,
+      name: "Attar",
+      photo: "images/muslim-caste-images/Attar.png",
+      description: "Attar",
+    },
+    {
+      id: 14,
+      name: "Qureshi",
+      photo: "images/muslim-caste-images/Qureshi.png",
+      description: "Qureshi",
+    },
+    {
+      id: 9,
+      name: "Mansoori",
+      photo: "images/muslim-caste-images/Mansoori.png",
+      description: "Mansoori",
+    },
+    {
+      id: 15,
+      name: "Salmani",
+      photo: "images/muslim-caste-images/Salmani.png",
+      description: "Salmani",
+    },
+    {
+      id: 7,
+      name: "Idrisi",
+      photo: "images/muslim-caste-images/Idrisi.png",
+      description: "Idrisi",
+    },
+    {
+      id: 8,
+      name: "Kalal",
+      photo: "images/muslim-caste-images/Kalal.png",
+      description: "Kalal",
+    },
+    {
+      id: 5,
+      name: "Faqir",
+      photo: "images/muslim-caste-images/Faqir.png",
+      description: "Faqir",
+    },
+    {
+      id: 6,
+      name: "Garadi",
+      photo: "images/muslim-caste-images/Garadi.png",
+      description: "Garadi",
+    },
+    {
+      id: 17,
+      name: "Siddi",
+      photo: "images/muslim-caste-images/Siddi.png",
+      description: "Siddi",
+    },
+    {
+      id: 13,
+      name: "Pirzada",
+      photo: "images/muslim-caste-images/Pirzada.png",
+      description: "Pirzada",
+    },
+  ]
+
+  const muslimcastes3 = [
+    {
+      id: 3,
+      name: "Bhangi",
+      photo: "images/muslim-caste-images/Bhangi.png",
+      description: "Bhangi",
+    },
+    {
+      id: 4,
+      name: "Chishti",
+      photo: "images/muslim-caste-images/Chishti.png",
+      description: "Chishti",
+    },
+  ]
+
+  const jaincastes1 = [
     {
       id: 1,
       name: "Agrawal",
       photo: "images/jain-caste-images/agrawal.png",
       description: "Agrawal",
     },
-    {
-      id: 2,
-      name: "Balija",
-      photo: "images/jain-caste-images/balija.png",
-      description: "Balija",
-    },
-    {
-      id: 3,
-      name: "Fasli",
-      photo: "images/jain-caste-images/fasli.png",
-      description: "Fasli",
-    },
-    {
-      id: 4,
-      name: "Kadmi",
-      photo: "images/jain-caste-images/kadmi.png",
-      description: "Kadmi",
-    },
-    {
-      id: 5,
-      name: "Kasar",
-      photo: "images/jain-caste-images/kasar.png",
-      description: "Kasar",
-    },
+    
     {
       id: 6,
       name: "Khandelwal",
@@ -586,28 +606,10 @@ function Homepage() {
       description: "Khandelwal",
     },
     {
-      id: 7,
-      name: "Modh",
-      photo: "images/jain-caste-images/modh.png",
-      description: "Modh",
-    },
-    {
-      id: 8,
-      name: "Nadar",
-      photo: "images/jain-caste-images/nadar.png",
-      description: "Nadar",
-    },
-    {
       id: 9,
       name: "Oswal",
       photo: "images/jain-caste-images/oswal.png",
       description: "Oswal",
-    },
-    {
-      id: 10,
-      name: "Panchama",
-      photo: "images/jain-caste-images/panchama.png",
-      description: "Panchama",
     },
     {
       id: 11,
@@ -629,7 +631,52 @@ function Homepage() {
     },
   ];
 
-  const sikhcastes = [
+  const jaincastes2 = [
+    {
+      id: 3,
+      name: "Fasli",
+      photo: "images/jain-caste-images/fasli.png",
+      description: "Fasli",
+    },
+    {
+      id: 2,
+      name: "Balija",
+      photo: "images/jain-caste-images/balija.png",
+      description: "Balija",
+    },
+    {
+      id: 4,
+      name: "Kadmi",
+      photo: "images/jain-caste-images/kadmi.png",
+      description: "Kadmi",
+    },
+    {
+      id: 5,
+      name: "Kasar",
+      photo: "images/jain-caste-images/kasar.png",
+      description: "Kasar",
+    },
+    {
+      id: 7,
+      name: "Modh",
+      photo: "images/jain-caste-images/modh.png",
+      description: "Modh",
+    },
+    {
+      id: 8,
+      name: "Nadar",
+      photo: "images/jain-caste-images/nadar.png",
+      description: "Nadar",
+    },
+    {
+      id: 10,
+      name: "Panchama",
+      photo: "images/jain-caste-images/panchama.png",
+      description: "Panchama",
+    },
+  ]
+
+  const sikhcastes1 = [
     {
       id: 1,
       name: "Ahluwalia",
@@ -655,6 +702,21 @@ function Homepage() {
       description: "Kamboj",
     },
     {
+      id: 6,
+      name: "Rai",
+      photo: "images/sikh-caste-images/rai.png",
+      description: "Rai",
+    },
+    {
+      id: 9,
+      name: "Saini",
+      photo: "images/sikh-caste-images/saini.png",
+      description: "Saini",
+    },
+  ];
+
+  const sikhcastes2 = [
+    {
       id: 4,
       name: "Mazhabi",
       photo: "images/sikh-caste-images/mazhabi.png",
@@ -665,12 +727,6 @@ function Homepage() {
       name: "Mehra",
       photo: "images/sikh-caste-images/mehra.png",
       description: "Mehra",
-    },
-    {
-      id: 6,
-      name: "Rai",
-      photo: "images/sikh-caste-images/rai.png",
-      description: "Rai",
     },
     {
       id: 7,
@@ -684,12 +740,7 @@ function Homepage() {
       photo: "images/sikh-caste-images/ramgarhia.png",
       description: "Ramgarhia",
     },
-    {
-      id: 9,
-      name: "Saini",
-      photo: "images/sikh-caste-images/saini.png",
-      description: "Saini",
-    },
+    
     {
       id: 10,
       name: "Tarkhan",
@@ -698,60 +749,20 @@ function Homepage() {
     },
   ];
 
-  const buddhistcaste = [
-    {
-      id: 1,
-      name: "Bhangi",
-      photo: "images/buddhist-caste-images/bhangi.png",
-      description: "Bhangi",
-    },
+  const buddhistcaste1 = [
+    
     {
       id: 2,
       name: "Bhutia",
       photo: "images/buddhist-caste-images/bhutia.png",
       description: "Bhutia",
     },
-    {
-      id: 3,
-      name: "Chakma",
-      photo: "images/buddhist-caste-images/chakma.png",
-      description: "Chakma",
-    },
-    {
-      id: 4,
-      name: "Dom",
-      photo: "images/buddhist-caste-images/dom.png",
-      description: "Dom",
-    },
+    
     {
       id: 5,
       name: "Lepcha",
       photo: "images/buddhist-caste-images/lepcha.png",
       description: "Lepcha",
-    },
-    {
-      id: 6,
-      name: "Matang",
-      photo: "images/buddhist-caste-images/matang.png",
-      description: "Matang",
-    },
-    {
-      id: 7,
-      name: "Oraon",
-      photo: "images/buddhist-caste-images/oraon.png",
-      description: "Oraon",
-    },
-    {
-      id: 8,
-      name: "Paswan",
-      photo: "images/buddhist-caste-images/paswan.png",
-      description: "Paswan",
-    },
-    {
-      id: 9,
-      name: "Santhal",
-      photo: "images/buddhist-caste-images/santhal.png",
-      description: "Santhal",
     },
     {
       id: 10,
@@ -760,6 +771,54 @@ function Homepage() {
       description: "Sherpa",
     },
   ];
+
+  const buddhistcaste2 =[
+    {
+      id: 7,
+      name: "Oraon",
+      photo: "images/buddhist-caste-images/oraon.png",
+      description: "Oraon",
+    },
+    {
+      id: 9,
+      name: "Santhal",
+      photo: "images/buddhist-caste-images/santhal.png",
+      description: "Santhal",
+    },
+    {
+      id: 3,
+      name: "Chakma",
+      photo: "images/buddhist-caste-images/chakma.png",
+      description: "Chakma",
+    },
+  ]
+
+  const buddhistcaste3 =[
+    {
+      id: 1,
+      name: "Bhangi",
+      photo: "images/buddhist-caste-images/bhangi.png",
+      description: "Bhangi",
+    },
+    {
+      id: 4,
+      name: "Dom",
+      photo: "images/buddhist-caste-images/dom.png",
+      description: "Dom",
+    },
+    {
+      id: 8,
+      name: "Paswan",
+      photo: "images/buddhist-caste-images/paswan.png",
+      description: "Paswan",
+    },
+    {
+      id: 6,
+      name: "Matang",
+      photo: "images/buddhist-caste-images/matang.png",
+      description: "Matang",
+    },
+  ]
 
   const religionData = [
     { id: 1, name: "Hindus", image: "images/religion-images/hindu.png" },
@@ -1082,7 +1141,7 @@ function Homepage() {
         </div>
       </div>
 
-      <div className="w-full max-w-7xl mx-auto p-4">
+      <div className="w-full max-w-7xl mx-auto p-4 mb-10">
         <div className="flex flex-col lg:flex-row gap-4 min-h-[50vh]">
           {/* Image container */}
           <div
@@ -1114,14 +1173,11 @@ function Homepage() {
         </div>
       </div>
 
-      <div
-        id="religion"
-        className="w-full mx-2 h-auto border-2 rounded-3xl shadow-sm dp border-[#776B5D] overflow-hidden"
-      >
-        <div className="w-full text-white hello text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4">
-          <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-3 sm:m-5 gap-4 items-center bg-[#F5F3EF] dp rounded-xl p-4">
+      <div id="religion" className="mx-auto mt-24 h-auto">
+        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl">
+          <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] rounded-xl p-4 ">
             {/* Religion Box */}
-            <div className="w-fit font-bodoni px-3 sm:px-5 text-[#776B5D] rounded-xl whitespace-nowrap">
+            <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
               Religions
             </div>
 
@@ -1131,7 +1187,7 @@ function Homepage() {
             <div className="block sm:hidden w-3/4 h-1 bg-[#B0A695]"></div>
 
             {/* Text Content */}
-            <div className="text-base sm:text-xl lg:text-2xl font-[500] text-[#73716C] text-center sm:text-left max-h-[80vh] overflow-y-auto">
+            <div className="text-2xl font-[500] text-[#73716C] text-center sm:text-left">
               India is a land of unparalleled diversity. Our guiding principle
               draws inspiration from the Indian national anthem -"হিন্দু বৌদ্ধ
               শিখ জৈন পারসিক মুসলমান খৃস্টানী", penned by Rabindranath Tagore,
@@ -1148,15 +1204,15 @@ function Homepage() {
               community.
             </div>
           </div>
-
-          <div className="h-auto flex flex-wrap justify-center gap-4 sm:gap-6 p-4 sm:p-6">
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+          <div className="h-auto flex flex-wrap justify-center gap-4 sm:gap-6 p-4 sm:p-6 bg-[#F5F3EF]">
             {/* Map over the data to display ReligionCards */}
             {religionData.map((religion) => (
               <ReligionCard
                 key={religion.id}
                 image={religion.image}
                 religionName={religion.name}
-                onLearnMore={() => handleLearnMore(religion.name)}
+                // onLearnMore={() => handleLearnMore(religion.name)}
               />
             ))}
           </div>
@@ -1199,19 +1255,151 @@ function Homepage() {
             </div>
             {/* <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" /> */}
           </div>
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
 
-          <div className="h-[130vh] w-5/6 flex flex-wrap items-center mx-auto justify-center gap-6 overflow-auto ">
-            {/* Map over the data to display CasteCards */}
-            {castes.map((caste) => (
-              <CasteCard
-                key={caste.id}
-                religion={"hindu"}
-                name={caste.name}
-                photo={caste.photo}
-              />
-            ))}
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Priests and Scholars</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
           </div>
-        </div>
+
+
+          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+              {/* Map over the data to display CasteCards */}
+              {hinduscastes1.map((caste) => (
+                <CasteCard
+                  key={caste.id}
+                  religion={"hindu"}
+                  name={caste.name}
+                  photo={caste.photo}
+                />
+              ))}
+            </div>
+
+            <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Warriors and Rulers</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+          </div>
+
+
+          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+              {/* Map over the data to display CasteCards */}
+              {hinduscastes2.map((caste) => (
+                <CasteCard
+                  key={caste.id}
+                  religion={"hindu"}
+                  name={caste.name}
+                  photo={caste.photo}
+                />
+              ))}
+            </div>
+
+            <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Merchants and Traders</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+          </div>
+
+
+          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+              {/* Map over the data to display CasteCards */}
+              {hinduscastes3.map((caste) => (
+                <CasteCard
+                  key={caste.id}
+                  religion={"hindu"}
+                  name={caste.name}
+                  photo={caste.photo}
+                />
+              ))}
+            </div>
+
+
+            <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Laborers and Service Providers</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+          </div>
+
+
+          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+              {/* Map over the data to display CasteCards */}
+              {hinduscastes4.map((caste) => (
+                <CasteCard
+                  key={caste.id}
+                  religion={"hindu"}
+                  name={caste.name}
+                  photo={caste.photo}
+                />
+              ))}
+            </div>
+
+
+            <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Historically Marginalized Communities</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+          </div>
+
+
+          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+              {/* Map over the data to display CasteCards */}
+              {hinduscastes5.map((caste) => (
+                <CasteCard
+                  key={caste.id}
+                  religion={"hindu"}
+                  name={caste.name}
+                  photo={caste.photo}
+                />
+              ))}
+            </div>
+
+            <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Indigenous Tribes</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+          </div>
+
+
+          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+              {/* Map over the data to display CasteCards */}
+              {hinduscastes6.map((caste) => (
+                <CasteCard
+                  key={caste.id}
+                  religion={"hindu"}
+                  name={caste.name}
+                  photo={caste.photo}
+                />
+              ))}
+            </div>
+
+            <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Other Caste and Communities</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+          </div>
+
+
+          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+              {/* Map over the data to display CasteCards */}
+              {hinduscastes7.map((caste) => (
+                <CasteCard
+                  key={caste.id}
+                  religion={"hindu"}
+                  name={caste.name}
+                  photo={caste.photo}
+                />
+              ))}
+            </div>
+
+            <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+            </div>
+            
         <div
           id="muslim"
           className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-4 bg-[#F5F3EF] rounded-3xl"
@@ -1219,7 +1407,7 @@ function Homepage() {
           <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] rounded-xl p-4 ">
             {/* Religion Box */}
             <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
-              Muslim-Castes
+              Muslim-Communities
             </div>
 
             {/* Vertical Separator - hidden on mobile, shown on desktop */}
@@ -1248,20 +1436,67 @@ function Homepage() {
             </div>
           </div>
 
-          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
 
-          <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
-            {/* Map over the data to display CasteCards */}
-            {muslimcastes.map((caste) => (
-              <CasteCard
-                key={caste.id}
-                religion={"muslim"}
-                name={caste.name}
-                photo={caste.photo}
-              />
-            ))}
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Noble or High-born Communities</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
           </div>
-          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+
+
+          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+              {/* Map over the data to display CasteCards */}
+              {muslimcastes1.map((caste) => (
+                <CasteCard
+                  key={caste.id}
+                  religion={"muslim"}
+                  name={caste.name}
+                  photo={caste.photo}
+                />
+              ))}
+            </div>
+
+            <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Low-born or Commoners Communities</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+          </div>
+
+
+    <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+        {/* Map over the data to display CasteCards */}
+        {muslimcastes2.map((caste) => (
+          <CasteCard
+            key={caste.id}
+            religion={"muslim"}
+            name={caste.name}
+            photo={caste.photo}
+          />
+        ))}
+      </div>
+
+      <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+            <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+            <span>Marginalized Communities</span>
+              {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+            </div>
+
+
+            <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+            {/* Map over the data to display CasteCards */}
+            {muslimcastes3.map((caste) => (
+            <CasteCard
+              key={caste.id}
+              religion={"muslim"}
+              name={caste.name}
+              photo={caste.photo}
+            />
+            ))}
+            </div>
+
+            <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
         </div>
 
         <div
@@ -1271,7 +1506,7 @@ function Homepage() {
           <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF]  rounded-xl p-4 ">
             {/* Religion Box */}
             <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
-              Buddhist-Castes
+              Buddhist-Communities
             </div>
 
             {/* Vertical Separator - hidden on mobile, shown on desktop */}
@@ -1301,20 +1536,64 @@ function Homepage() {
             </div>
           </div>
 
-          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
 
-          <div className="h-[80vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
-            {/* Map over the data to display CasteCards */}
-            {buddhistcaste.map((caste) => (
-              <CasteCard
-                key={caste.id}
-                religion={"buddhist"}
-                name={caste.name}
-                photo={caste.photo}
-              />
-            ))}
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+          <span>Himalayan Indigenous Communities</span>
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
           </div>
-          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
+
+
+    <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+        ``{/* Map over the data to display CasteCards */}
+        {buddhistcaste1.map((caste) => (
+          <CasteCard
+            key={caste.id}
+            religion={"buddhist"}
+            name={caste.name}
+            photo={caste.photo}
+          />
+        ))}
+      </div>
+
+<hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+
+        <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative mt-4">
+            <span>Tribal/Ethnic Communities</span>
+          </div>
+
+
+            <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+          {/* Map over the data to display CasteCards */}
+          {buddhistcaste2.map((caste) => (
+            <CasteCard
+              key={caste.id}
+              religion={"buddhist"}
+              name={caste.name}
+              photo={caste.photo}
+            />
+          ))}
+        </div>
+        <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
+
+        <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative mt-4">
+            <span>Dalit Communities</span>
+          </div>
+
+
+            <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+          {/* Map over the data to display CasteCards */}
+          {buddhistcaste3.map((caste) => (
+            <CasteCard
+              key={caste.id}
+              religion={"buddhist"}
+              name={caste.name}
+              photo={caste.photo}
+            />
+          ))}
+        </div>
+        <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
         </div>
 
         <div
@@ -1361,9 +1640,17 @@ function Homepage() {
             </div>
           </div>
 
-          <div className="h-[130vh] flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+              <span>Upper-tier Jain Communities</span>
+              {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+            </div>
+
+
+              <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}
-            {jaincastes.map((caste) => (
+            {jaincastes1.map((caste) => (
               <CasteCard
                 key={caste.id}
                 religion={"jain"}
@@ -1372,7 +1659,27 @@ function Homepage() {
               />
             ))}
           </div>
-          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
+
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative mt-4">
+              <span>Other Jain Communities</span>
+            </div>
+
+
+              <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+            {/* Map over the data to display CasteCards */}
+            {jaincastes2.map((caste) => (
+              <CasteCard
+                key={caste.id}
+                religion={"jain"}
+                name={caste.name}
+                photo={caste.photo}
+              />
+            ))}
+          </div>
+          <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
         </div>
 
         <div
@@ -1382,7 +1689,7 @@ function Homepage() {
           <div className="w-full mx-auto h-auto flex flex-col sm:flex-row m-5 gap-4 items-center bg-[#F5F3EF] rounded-xl p-4 ">
             {/* Religion Box */}
             <div className="w-fit font-bodoni px-5 text-[#776B5D] rounded-xl">
-              Sikh-Castes
+              Sikh-Communities
             </div>
 
             {/* Vertical Separator - hidden on mobile, shown on desktop */}
@@ -1415,9 +1722,17 @@ function Homepage() {
             </div>
           </div>
 
-          <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
+              <span>Traditional Sikh Communities</span>
+              {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
+            </div>
+
+
+              <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
             {/* Map over the data to display CasteCards */}
-            {sikhcastes.map((caste) => (
+            {sikhcastes1.map((caste) => (
               <CasteCard
                 key={caste.id}
                 religion={"sikh"}
@@ -1426,6 +1741,28 @@ function Homepage() {
               />
             ))}
           </div>
+
+          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
+
+
+          <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative mt-4">
+              <span>Artisan and Occupational Communities</span>
+            </div>
+
+
+              <div className=" flex flex-wrap justify-center gap-6 w-5/6 mx-auto overflow-auto ">
+            {/* Map over the data to display CasteCards */}
+            {sikhcastes2.map((caste) => (
+              <CasteCard
+                key={caste.id}
+                religion={"sikh"}
+                name={caste.name}
+                photo={caste.photo}
+              />
+            ))}
+          </div>
+
+
           <hr className="border my-6 border-[#B0A695] w-3/4 mx-auto" />
         </div>
       </div>
@@ -1552,6 +1889,6 @@ function Homepage() {
       <Footer />
     </div>
   );
-}
+  }
 
 export default Homepage;
