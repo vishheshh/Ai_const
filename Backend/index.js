@@ -41,7 +41,7 @@ cloudinary.config({
 });
 console.log("Cloudinary configured successfully");
 // Static Files
-app.use("/public",express.static("public"));
+app.use(express.static("public"));
 
 // Routes
 app.use("/", casteRouter);
