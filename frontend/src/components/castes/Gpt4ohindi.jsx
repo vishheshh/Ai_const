@@ -79,6 +79,7 @@ function Gpt4ohindi() {
     <div className="w-full h-auto">
       <div className="mt-5 text-2xl mx-auto font-[500] hello flex w-5/6 p-5 bg-[#F5F3EF] gap-10 items text-gray-600 items-center justify-center rounded-3xl dp">
         <iframe
+        // src = "https://hi.wikipedia.org/wiki/%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%A3"
           src={data[1][0]}
           title="Wikipedia Page"
           style={{ width: "100%", height: "60vh", border: "none" }}
