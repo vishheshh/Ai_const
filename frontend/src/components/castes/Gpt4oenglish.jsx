@@ -85,6 +85,7 @@ function Gpt4oenglish() {
     <div className="w-full h-auto">
       <div className="mt-5 text-2xl mx-auto font-[500] hello flex w-5/6 p-5 bg-[#F5F3EF] gap-10 items text-gray-600 items-center justify-center rounded-3xl dp">
         <iframe
+          // src = "https://en.wikipedia.org/wiki/Brahmin"
           src={data[0][0]}
           title="Wikipedia Page"
           style={{ width: "100%", height: "60vh", border: "none" }}
