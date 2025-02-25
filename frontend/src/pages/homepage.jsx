@@ -1074,48 +1074,48 @@ function Homepage() {
           <hr className="mx-auto border border-slate-800 w-1/2 mt-2" />
 
           {/* Navbar Links */}
-          <div className="w-5/6 mb-4 shrink-0 flex flex-wrap gap-2 gap-x-10 items-center justify-center mt-6">
+          <div className="w-5/6 mb-4 shrink-0 flex flex-wrap gap-4 gap-x-4 items-center justify-center mt-6">
             <div
-              className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello "
+              className="rounded-2xl cursor-pointer text-2xl mx-2 px-4 py-2 button-hover-effect hello "
               onClick={() => scrollToSection("religion")}
             >
               <span>Home</span>
             </div>
             <div
-              className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-2 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("religion")}
             >
               <span>Religions</span>
             </div>
             <div
-              className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-2 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("hindu")}
             >
               <span>Hindu Castes</span>
             </div>
             <div
-              className="rounded-2xl cursor-pointer text-2xl mx-4 px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-2 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("muslim")}
             >
-              <span>Muslim Castes</span>
+              <span>Muslim Communities</span>
             </div>
             <div
-              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-2 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("buddhist")}
             >
-              <span>Buddhist Castes</span>
+              <span>Buddhist Communities</span>
             </div>
             <div
-              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-2 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("jain")}
             >
-              <span>Jain Castes</span>
+              <span>Jain Communities</span>
             </div>
             <div
-              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-2 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("sikh")}
             >
-              <span>Sikh Castes</span>
+              <span>Sikh Communities</span>
             </div>
             {/* <div
               className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
@@ -1125,14 +1125,14 @@ function Homepage() {
             </div> */}
 
             <div
-              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-2 px-4 py-2 button-hover-effect hello"
               onClick={() => navigate("/mixcastes")}
             >
-              <span>Mix Castes</span>
+              <span>Mix Communities</span>
             </div>
 
             <div
-              className="rounded-2xl cursor-pointer text-2xl px-4 py-2 button-hover-effect hello"
+              className="rounded-2xl cursor-pointer text-2xl mx-2 px-4 py-2 button-hover-effect hello"
               onClick={() => scrollToSection("team")}
             >
               <span>Team</span>
