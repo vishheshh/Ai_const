@@ -108,57 +108,69 @@ const CasteCard = ({ religion, name, photo }) => {
                 className="w-1/2 object-cover group-hover:brightness-75 transition duration-300 dp"
               />
               <div className="flex flex-col text-[#776B5D] rounded-lg text-3xl pl-10">
-                <h2 className="text-3xl font-semibold text-gray-600 mb-5">
+                <h2 className="text-4xl font-semibold text-gray-600 mb-5 ml-28 text-center">
                   Available Models
                 </h2>
+
+                <h3 className="text-3xl font-semibold text-gray-600 mb-3 mt-5 text-left"> 
+                   English Models
+                </h3>
+
                 <ol className="list-decimal list-inside flex flex-col items-start">
                   <li
                     className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp"
                     onClick={() => handleOptionClick("GPT-4o-English")}
                   >
-                    GPT-4o English
+                    GPT-4o
                   </li>
                   <li
                     className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp"
                     onClick={() => handleOptionClick("GPT-4o-Hindi")}
                   >
-                    GPT-4o Hindi
+                    Llama 3.3 70B
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Sutra Hindi
+                  Claude 3.5 Sonnet
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Krutrium Hindi
+                  Phi 3.5
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Airavata Hindi
+                  Gemma 2B
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Llama 3.3 70B English
+                  Mixtral
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Navrasa 2.0 Hindi
+                  Jamba
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Claude 3.5 Sonnet English
+                  Mamba
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Phi 3.5 English
+                  DeepSeek R1
+                  </li>
+                  </ol>
+
+                  <h3 className="text-3xl font-semibold text-gray-600 mb-3 mt-5 text-left"> 
+                   Indic Models
+                </h3>
+
+                  <ol className="list-decimal list-inside flex flex-col items-start">
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                  GPT-4o
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Gemma 2B English
+                  Sutra
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Mixtral English
+                  Krutrium
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Jamba English
+                  Airavata
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    Mamba English
-                  </li>
-                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                    DeepSeek R1 English
+                  Navrasa 2.0
                   </li>
                 </ol>
               </div>
