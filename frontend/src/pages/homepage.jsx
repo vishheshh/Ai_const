@@ -1198,7 +1198,19 @@ function Homepage() {
               we celebrate—whether among Hindu, Muslim, Buddhist, Jain, Sikh, or
               other communities—is based on classifications drawn from the Other
               Backward Classes (OBC) lists issued by both the central and state
-              governments. These lists provide an official framework for
+              governments. 
+              
+              <ol className="list-decimal list-inside">
+                <li className = "ml-8">
+                    https://www.ncbc.nic.in/user_panel/centralliststateview.aspx
+                </li>
+                <li className = "ml-8" 
+                >
+                    https://www.india.gov.in/topics/social-development/other-backward-classes
+                </li>
+              </ol>
+              
+              These lists provide an official framework for
               understanding caste-based identities across religious traditions,
               acknowledging the distinct socio-economic realities within each
               community.

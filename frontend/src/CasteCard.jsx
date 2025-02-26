@@ -43,7 +43,7 @@ const CasteCard = ({ religion, name, photo }) => {
   }, [showOptions]);
 
   return (
-    <div className="w-[400px] h-[800px] bg-white shadow-lg rounded-lg overflow-hidden relative group transition-all duration-300">
+    <div className="w-[400px] h-[755px] bg-white shadow-lg rounded-lg overflow-hidden relative group transition-all duration-300">
       {/* Image Section */}
       <div className="overflow-hidden relative" onClick={handleCasteCard}>
         <img
@@ -55,9 +55,7 @@ const CasteCard = ({ religion, name, photo }) => {
       </div>
 
       {/* Content Section */}
-      <div className="p-4 flex flex-col items-center">
-        <h2 className="text-4xl font-semibold text-gray-800 mb-2"></h2>
-      </div>
+      <div className="mb-6"> </div>
 
       {/* Learn More Button */}
       <div className="w-full flex items-center justify-center">
@@ -77,6 +75,7 @@ const CasteCard = ({ religion, name, photo }) => {
           alt=""
           loading="lazy"
         />
+        <figcaption className="absolute bottom-32 left-12 text-xl font-poppins text-gray-600 mb-6 ">GPT-4o English Truth Meter</figcaption>
       </div>
 
       {/* Centered Options Box */}
