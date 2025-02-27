@@ -27,7 +27,7 @@ casteRouter.get("/hindus/get/:casteName", async (req, res) => {
   }
 });
 
-casteRouter.get("/muslim/get/:casteName", async (req, res) => {
+casteRouter.get("/muslims/get/:casteName", async (req, res) => {
   const { religionName, casteName } = req.params;
   const { offset = 0, limit = 20 } = req.query; // Default offset: 0, limit: 20
   try {
@@ -50,7 +50,7 @@ casteRouter.get("/muslim/get/:casteName", async (req, res) => {
   }
 });
 
-casteRouter.get("/sikh/get/:casteName", async (req, res) => {
+casteRouter.get("/sikhs/get/:casteName", async (req, res) => {
   const { religionName, casteName } = req.params;
   const { offset = 0, limit = 20 } = req.query; // Default offset: 0, limit: 20
   try {
@@ -73,7 +73,7 @@ casteRouter.get("/sikh/get/:casteName", async (req, res) => {
   }
 });
 
-casteRouter.get("/:jain/get/:casteName", async (req, res) => {
+casteRouter.get("/:jains/get/:casteName", async (req, res) => {
   const { religionName, casteName } = req.params;
   const { offset = 0, limit = 20 } = req.query; // Default offset: 0, limit: 20
   try {
@@ -96,7 +96,7 @@ casteRouter.get("/:jain/get/:casteName", async (req, res) => {
   }
 });
 
-casteRouter.get("/:buddhist/get/:casteName", async (req, res) => {
+casteRouter.get("/:buddhists/get/:casteName", async (req, res) => {
   const { religionName, casteName } = req.params;
   const { offset = 0, limit = 20 } = req.query; // Default offset: 0, limit: 20
   try {

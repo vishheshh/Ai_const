@@ -41,7 +41,7 @@ class CasteController {
     try {
       // console.log(religionName);
       const cloudinaryUrl =
-        "https://res.cloudinary.com/dwsava4sp/raw/upload/v1738523759/Muslim_Castes_x32thp.xlsx";
+        "https://res.cloudinary.com/dwsava4sp/raw/upload/v1740557829/Muslim_Castes_x32thp.xlsx";
       // Fetch the file from Cloudinary
       const response = await axios.get(cloudinaryUrl, {
         responseType: "arraybuffer",
@@ -77,7 +77,7 @@ class CasteController {
     try {
       // console.log(religionName);
       const cloudinaryUrl =
-        "https://res.cloudinary.com/dsgeyyhvl/raw/upload/v1740084427/Muslim_Castes_bmbdsr.xlsx";
+        "https://res.cloudinary.com/dwsava4sp/raw/upload/v1740557846/Sikh_Castes_y482na.xlsx";
       // Fetch the file from Cloudinary
       const response = await axios.get(cloudinaryUrl, {
         responseType: "arraybuffer",
@@ -149,7 +149,7 @@ class CasteController {
     try {
       // console.log(religionName);
       const cloudinaryUrl =
-        "https://res.cloudinary.com/dsgeyyhvl/raw/upload/v1740084428/Buddhist_castes_u3zckw.xlsx";
+        "https://res.cloudinary.com/dwsava4sp/raw/upload/v1740557890/Buddhist_castes_o4tkbz.xlsx";
       // Fetch the file from Cloudinary
       const response = await axios.get(cloudinaryUrl, {
         responseType: "arraybuffer",
