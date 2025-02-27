@@ -75,7 +75,7 @@ const CasteCard = ({ religion, name, photo }) => {
           alt=""
           loading="lazy"
         />
-        <figcaption className="absolute bottom-32 left-12 text-xl font-poppins text-gray-600 mb-6 ">GPT-4o English Truth Meter</figcaption>
+        <figcaption className="absolute bottom-32 left-28 text-xl font-poppins text-gray-600 mb-6 ">GPT-4o English</figcaption>
       </div>
 
       {/* Centered Options Box */}

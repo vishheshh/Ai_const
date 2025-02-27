@@ -1202,11 +1202,14 @@ function Homepage() {
               
               <ol className="list-decimal list-inside">
                 <li className = "ml-8">
-                    https://www.ncbc.nic.in/user_panel/centralliststateview.aspx
+                <a href="https://www.ncbc.nic.in/user_panel/centralliststateview.aspx" target="_blank" rel="noopener noreferrer">
+                  https://www.ncbc.nic.in/user_panel/centralliststateview.aspx
+                </a>
                 </li>
-                <li className = "ml-8" 
-                >
-                    https://www.india.gov.in/topics/social-development/other-backward-classes
+                <li className = "ml-8" >
+                <a href="https://www.india.gov.in/topics/social-development/other-backward-classes" target="_blank" rel="noopener noreferrer">
+                  https://www.india.gov.in/topics/social-development/other-backward-classes
+                </a>
                 </li>
               </ol>
               
@@ -1491,7 +1494,7 @@ function Homepage() {
       <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-6" />
 
             <div className="mx-auto w-fit px-8 py-4 text-4xl text-center text-[#73716C] rounded-2xl border-2 border-gray-500 shadow-lg mb-6 relative">
-            <span>Marginalized Communities</span>
+            <span>Historically Marginalized Communities</span>
               {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-[2px] bg-gray-500"></div> */}
             </div>
 
