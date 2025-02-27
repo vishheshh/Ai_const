@@ -45,7 +45,7 @@ function Gpt4oenglish() {
         )}?offset=1&limit=5`
       );
 
-      console.log(response.data.data)
+      // console.log(response.data.data)
       if (response.data.status === 1) {
         const fetchedData = response.data.data;
 
@@ -80,7 +80,8 @@ function Gpt4oenglish() {
       <div className="mt-5 text-2xl mx-auto font-[500] hello flex w-5/6 p-5 bg-[#F5F3EF] gap-10 items-center justify-center rounded-3xl dp">
         {data && data[0] && data[0][0] ? (
           <iframe
-            src={data[0][0]}
+            src="https://en.wikipedia.org/wiki/Brahmin"
+            // src={data[0][0]}
             title="Wikipedia Page"
             style={{ width: "100%", height: "60vh", border: "none" }}
           ></iframe>
@@ -107,7 +108,7 @@ function Gpt4oenglish() {
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               ></path>
             </svg>
-            <p>Wiki Link  Loading...</p>
+            <p>Wiki Link Loading...</p>
           </div>
         )}
       </div>
