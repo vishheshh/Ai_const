@@ -165,7 +165,7 @@ const ReligionCard = ({ key, image, religionName }) => {
                   Sutra
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Krutrium
+                  Krutrim
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
                   Airavata
