@@ -925,6 +925,32 @@ function Homepage() {
         },
       ],
     },
+    {
+      id: 8,
+      name: "Rahul K",
+      image: "images/team/rahul.jpg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https://www.linkedin.com/in/rahul-k--/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 9,
+      name: "Shivam Dubey",
+      image: "images/team/shivam.jpeg",
+      affiliation: "IIT Madras BS",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https://www.linkedin.com/in/syntaxsavant/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
   ];
 
   const NextArrow = ({ onClick }) => {
@@ -1203,12 +1229,12 @@ function Homepage() {
               <ol className="list-decimal list-inside">
                 <li className = "ml-8">
                 <a href="https://www.ncbc.nic.in/user_panel/centralliststateview.aspx" target="_blank" rel="noopener noreferrer">
-                  https://www.ncbc.nic.in/user_panel/centralliststateview.aspx
+                  NCBC
                 </a>
                 </li>
                 <li className = "ml-8" >
                 <a href="https://www.india.gov.in/topics/social-development/other-backward-classes" target="_blank" rel="noopener noreferrer">
-                  https://www.india.gov.in/topics/social-development/other-backward-classes
+                  India-Gov
                 </a>
                 </li>
               </ol>

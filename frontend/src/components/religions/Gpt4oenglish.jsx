@@ -39,7 +39,7 @@ function Gpt4oenglish() {
     try {
       setLoading(true);
       const response = await axios.get(
-        `${backendUrl}/get/${capitalizeFirstLetter(
+        `${backendUrl}/get/${capitalizeFirstLette(
           religionDetails.name
         )}?offset=${offset}&limit=${limit}`
       );
@@ -77,11 +77,38 @@ function Gpt4oenglish() {
   return (
     <div className="w-full h-auto">
       <div className="mt-5 text-2xl mx-auto font-[500] hello flex w-5/6 p-5 bg-[#F5F3EF] gap-10 items text-gray-600 items-center justify-center rounded-3xl dp">
-        <iframe
-          src={data[0][0]}
-          title="Wikipedia Page"
-          style={{ width: "100%", height: "60vh", border: "none" }}
-        ></iframe>
+      {data && data[0] && data[0][0] ? (
+          <iframe
+            src={data[0][0]}
+            title="Wikipedia Page"
+            style={{ width: "100%", height: "60vh", border: "none" }}
+          ></iframe>
+        ) : (
+          <div className="flex flex-col items-center justify-center h-[60vh]">
+            {/* A simple spinner using Tailwind CSS */}
+            <svg
+              className="animate-spin -ml-1 mr-3 h-10 w-10 text-[#B0A695]"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              ></path>
+            </svg>
+            <p>Wiki Link Loading...</p>
+          </div>
+        )}
       </div>
 
       <div className="font-medium w-fit text-5xl mt-5 bg-[#F5F3EF] text-[#776B5D] rounded-xl dp px-4 py-2 font-bodoni">
