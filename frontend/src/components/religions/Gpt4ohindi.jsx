@@ -119,7 +119,7 @@ function Gpt4ohindi() {
       <div className="w-full h-screen mt-4 flex flex-col sm:flex-row justify-evenly items-center py-2 px-20 border-2 border-[#776B5D] rounded-xl">
         <div className="w-2/5">
           <img
-            src={`../../public/religions/${religionDetails.name}_images/${religionDetails.name}_bar_chart_hindi.png`}
+            src={`/religions/${religionDetails.name}_images/${religionDetails.name}_bar_chart_hindi.png`}
             className="object-scale-down"
             alt=""
             loading="lazy"
