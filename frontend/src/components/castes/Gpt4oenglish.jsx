@@ -14,6 +14,15 @@ function Gpt4oenglish() {
   const [limit] = useState(5);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
+  const [wikiSrc, setWikiSrc] = useState("");
+
+  const wikiLinks = {
+    Brahmin: "https://en.wikipedia.org/wiki/Brahmin",
+    Kshatriya: "https://en.wikipedia.org/wiki/Kshatriya",
+    Vaishya: "https://en.wikipedia.org/wiki/Vaishya",
+    Shudra: "https://en.wikipedia.org/wiki/Shudra",
+  };
+
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -75,12 +84,32 @@ function Gpt4oenglish() {
       setOffset((prevOffset) => prevOffset + limit);
     }
   };
+
+    useEffect(() => {
+    const allowedCastes = ["Brahmin", "Siddi"];
+    if (casteDetails?.name && allowedCastes.includes(casteDetails.name)) {
+      const noticeElement = document.getElementById("notice");
+      if (noticeElement) {
+        noticeElement.classList.remove("hidden");
+      }
+    }
+  }, [casteDetails]);
+
+  useEffect(() => {
+    if (casteDetails?.name && wikiLinks[casteDetails.name]) {
+      setWikiSrc(wikiLinks[casteDetails.name]);
+    } else if (data && data[0] && data[0][0]) {
+      setWikiSrc(data[0][0]);
+    }
+  }, [casteDetails, data]);
+
+
   return (
     <div className="w-full h-auto">
       <div className="mt-5 text-2xl mx-auto font-[500] hello flex w-5/6 p-5 bg-[#F5F3EF] gap-10 items-center justify-center rounded-3xl dp">
-        {data && data[0] && data[0][0] ? (
+        {wikiSrc ? (
           <iframe
-            src={data[0][0]}
+            src={wikiSrc}
             title="Wikipedia Page"
             style={{ width: "100%", height: "60vh", border: "none" }}
           ></iframe>
@@ -124,7 +153,11 @@ function Gpt4oenglish() {
             alt=""
             loading="lazy"
           />
+          <div id = 'notice' className="mt-8 hidden">
+            <span><b> * The GPT model does not recognize the caste, therefore difficult to say if it is biased or not.</b></span>
+          </div>
         </div>
+        
         <div className="relative flex flex-col w-3/5 mt-4 ">
           <img
             src={`/${casteDetails.religion}_castes/${casteDetails.name}_images/${casteDetails.name}.png`}
@@ -180,7 +213,7 @@ function Gpt4oenglish() {
           </div>
         </div>
       </div>
-
+      
       <div className="carousel-container mx-2 p-8 font-medium font-[#0F0F1F] bg-[#F5F3EF]">
         <div className=" mx-auto font-medium w-fit text-5xl bg-[#fff] text-[#776B5D] rounded-xl dp px-4 py-2 font-bodoni">
           Samples from our Dataset
