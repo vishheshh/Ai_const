@@ -1251,8 +1251,8 @@ function Homepage() {
             {religionData.map((religion) => (
               <ReligionCard
                 key={religion.id}
-                image={religion.image}
-                religionName={religion.name}
+                name={religion.name}
+                photo={religion.image}
                 // onLearnMore={() => handleLearnMore(religion.name)}
               />
             ))}

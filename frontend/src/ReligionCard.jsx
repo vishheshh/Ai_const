@@ -3,13 +3,12 @@ import { gsap } from "gsap";
 import { IoMdClose } from "react-icons/io";
 import { useDispatch } from "react-redux";
 import { setReligionDetails } from "./reducers/religion";
-import { useNavigate } from "react-router-dom";
 
-const ReligionCard = ({ key, image, religionName }) => {
+const ReligionCard = ({ name, photo }) => {
+  // console.log(name)
   const [showOptions, setShowOptions] = useState(false);
   const optionsBoxRef = useRef(null);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleReligionCard = () => {
     setShowOptions(true);
@@ -17,9 +16,12 @@ const ReligionCard = ({ key, image, religionName }) => {
 
   const handleOptionClick = (model) => {
     // Dispatch caste details to Redux
-    dispatch(setReligionDetails({ name, image, model }));
+    dispatch(setReligionDetails({ name, photo, model}));
+    // console.log("Religion Details: ", { name, photo, model });
 
-    const url = `/${religionName.toLowerCase()}/${encodeURIComponent(model)}`;
+    const url = `religion/${name.toLowerCase()}/${encodeURIComponent(
+      model
+    )}`;
 
     // Open in a new tab
     // window.open(url, "_blank");
@@ -44,18 +46,18 @@ const ReligionCard = ({ key, image, religionName }) => {
 
   return (
     <div className="w-[400px] h-[755px] bg-white shadow-lg rounded-lg overflow-hidden relative group transition-all duration-300">
-      {/* Image Section */}
+      {/* photo Section */}
       <div className="overflow-hidden relative" onClick={handleReligionCard}>
         <img
-          src={image}
-          alt={religionName}
+          src={photo}
+          alt={name}
           loading="lazy"
           className="w-full h-full object-cover group-hover:brightness-75 transition duration-300"
         />
       </div>
 
       {/* Content Section */}
-    <div className="mb-6"> </div>
+      <div className="mb-6"> </div>
 
       {/* Learn More Button */}
       <div className="w-full flex items-center justify-center">
@@ -63,7 +65,7 @@ const ReligionCard = ({ key, image, religionName }) => {
           className="relative group flex items-center justify-center border-2 border-slate-700 px-3 py-1 rounded-lg text-slate-700 text-2xl overflow-hidden cursor-pointer transition-all duration-300 transform group-hover:-translate-y-1"
           onClick={handleReligionCard}
         >
-          <span className="relative z-10">{religionName}</span>
+          <span className="relative z-10">{name}</span>
           <div className="absolute top-0 right-full w-full h-full bg-[#F5F3EF] group-hover:right-0 transition-all duration-300"></div>
           <span className="absolute inset-0 bg-transparent group-hover:text-white transition duration-1000 z-0"></span>
         </div>
@@ -71,11 +73,15 @@ const ReligionCard = ({ key, image, religionName }) => {
 
       <div className="relative">
         <img
-          src={`/religions/${religionName.charAt(0).toLowerCase() + religionName.slice(1)}_images/${religionName}.png`}
+          src={`/religions/${
+            name.charAt(0).toLowerCase() + name.slice(1)
+          }_images/${name}.png`}
           alt=""
           loading="lazy"
         />
-        <figcaption className="absolute bottom-32 left-28 text-xl font-poppins text-gray-600 mb-6">GPT-4o English</figcaption>
+        <figcaption className="absolute bottom-32 left-12 text-xl font-poppins text-gray-600 mb-6">
+          GPT-4o English Truth Meter
+        </figcaption>
       </div>
 
       {/* Centered Options Box */}
@@ -86,12 +92,12 @@ const ReligionCard = ({ key, image, religionName }) => {
           onClick={handleOverlayClick}
         >
           <div
-              ref={optionsBoxRef}
-              className="bg-white h-5/6 max-h-[80vh] overflow-y-auto p-6 rounded-lg shadow-lg text-center space-y-4 md:w-7/12"
+            ref={optionsBoxRef}
+            className="bg-white h-5/6 max-h-[80vh] overflow-y-auto p-6 rounded-lg shadow-lg text-center space-y-4 md:w-7/12"
           >
             <div className="flex justify-between items-center">
               <div className="mx-auto w-fit px-5 bg-[#F5F3EF] text-[#776B5D] rounded-xl dp mb-5 text-5xl font-bodoni">
-                {religionName}
+                {name}
               </div>
               <IoMdClose
                 onClick={() => setShowOptions(false)}
@@ -102,8 +108,8 @@ const ReligionCard = ({ key, image, religionName }) => {
             <div className="flex">
               <img
                 loading="lazy"
-                src={image}
-                alt={religionName}
+                src={photo}
+                alt={name}
                 className="w-1/2 object-cover group-hover:brightness-75 transition duration-300 dp"
               />
               <div className="flex flex-col text-[#776B5D] rounded-lg text-3xl pl-10">
@@ -111,8 +117,8 @@ const ReligionCard = ({ key, image, religionName }) => {
                   Available Models
                 </h2>
 
-                <h3 className="text-3xl font-semibold text-gray-600 mb-3 mt-5 text-left"> 
-                   English Models
+                <h3 className="text-3xl font-semibold text-gray-600 mb-3 mt-5 text-left">
+                  English Models
                 </h3>
 
                 <ol className="list-decimal list-inside flex flex-col items-start">
@@ -122,60 +128,56 @@ const ReligionCard = ({ key, image, religionName }) => {
                   >
                     GPT-4o
                   </li>
-                  <li
-                    className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp"
-                  >
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
                     Llama 3.3 70B
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Claude 3.5 Sonnet
+                    Claude 3.5 Sonnet
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Phi 3.5
+                    Phi 3.5
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Gemma 2B
+                    Gemma 2B
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Mixtral
+                    Mixtral
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Jamba
+                    Jamba
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Mamba
+                    Mamba
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  DeepSeek R1
-                  </li>
-                  </ol>
-
-                  <h3 className="text-3xl font-semibold text-gray-600 mb-3 mt-5 text-left"> 
-                   Indic Models
-                </h3>
-
-                  <ol className="list-decimal list-inside flex flex-col items-start">
-                  <li 
-                  className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp"
-                  onClick={() => handleOptionClick("GPT-4o-Hindi")}
-                  >
-                  GPT-4o
-                  </li>
-                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Sutra
-                  </li>
-                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Krutrim
-                  </li>
-                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Airavata
-                  </li>
-                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Navrasa 2.0
+                    DeepSeek R1
                   </li>
                 </ol>
 
+                <h3 className="text-3xl font-semibold text-gray-600 mb-3 mt-5 text-left">
+                  Indic Models
+                </h3>
 
+                <ol className="list-decimal list-inside flex flex-col items-start">
+                  <li
+                    className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp"
+                    onClick={() => handleOptionClick("GPT-4o-Hindi")}
+                  >
+                    GPT-4o
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Sutra
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Krutrium
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Airavata
+                  </li>
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                    Navrasa 2.0
+                  </li>
+                </ol>
               </div>
             </div>
             <button

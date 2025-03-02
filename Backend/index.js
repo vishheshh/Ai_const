@@ -46,7 +46,7 @@ app.use(express.static("public"));
 // Routes
 app.use("/", casteRouter);
 app.use("/api", uploadRoutes);
-app.use("/",religionRouter);
+app.use("/get",religionRouter);
 
 // Test Route
 app.get("/test", (req, res) => {

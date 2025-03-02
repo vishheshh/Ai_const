@@ -2,13 +2,11 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { useSelector } from "react-redux";
 import axios from "axios";
-// import { useState, useEffect } from "react";
 
 function Gpt4oenglish() {
   const religionDetails = useSelector((state) => state.religion.details);
-  // console.log(casteDetails);
-  const backendUrl =
-    import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  // console.log(religionDetails);
+  const backendUrl =import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
   const [data, setData] = useState([]);
   const [offset, setOffset] = useState(1);
   const [limit] = useState(5);
@@ -39,7 +37,7 @@ function Gpt4oenglish() {
     try {
       setLoading(true);
       const response = await axios.get(
-        `${backendUrl}/get/${capitalizeFirstLette(
+        `${backendUrl}/get/${capitalizeFirstLetter(
           religionDetails.name
         )}?offset=${offset}&limit=${limit}`
       );
@@ -77,7 +75,7 @@ function Gpt4oenglish() {
   return (
     <div className="w-full h-auto">
       <div className="mt-5 text-2xl mx-auto font-[500] hello flex w-5/6 p-5 bg-[#F5F3EF] gap-10 items text-gray-600 items-center justify-center rounded-3xl dp">
-      {data && data[0] && data[0][0] ? (
+        {data && data[0] && data[0][0] ? (
           <iframe
             src={data[0][0]}
             title="Wikipedia Page"
@@ -118,7 +116,9 @@ function Gpt4oenglish() {
       <div className="w-full h-screen mt-4 flex flex-col sm:flex-row justify-evenly items-center py-2 px-20 border-2 border-[#776B5D] rounded-xl">
         <div className="w-2/5">
           <img
-            src={`/religions/${religionDetails.name}_images/${religionDetails.name}_bar_chart.png`}
+            src={`/religions/${religionDetails.name.toLowerCase()}_images/${
+              religionDetails.name
+            }_bar_chart.png`}
             className="object-scale-down"
             alt=""
             loading="lazy"
@@ -126,7 +126,9 @@ function Gpt4oenglish() {
         </div>
         <div className="relative flex flex-col w-3/5 mt-4 ">
           <img
-            src={`/religions/${religionDetails.name}_images/${religionDetails.name}.png`}
+            src={`/religions/${
+              religionDetails.name.charAt(0).toLowerCase() + religionDetails.name.slice(1)
+            }_images/${religionDetails.name}.png`}
             className=""
             alt=""
             loading="lazy"
@@ -228,7 +230,7 @@ function Gpt4oenglish() {
                     <li>{row[6]}</li> {/* Column G */}
                     <li>{row[7]}</li> {/* Column H */}
                     <li>{row[8]}</li> {/* Column I */}
-                    <li>{row[9]}</li>  {/* Column J */}
+                    <li>{row[9]}</li> {/* Column J */}
                   </ul>
                 </div>
               </div>

@@ -9,12 +9,10 @@ const CasteCard = ({ religion, name, photo }) => {
   const [showOptions, setShowOptions] = useState(false);
   const optionsBoxRef = useRef(null);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleCasteCard = () => {
     setShowOptions(true);
   };
-
   const handleOptionClick = (model) => {
     // Dispatch caste details to Redux
     dispatch(setCasteDetails({ name, photo, model, religion }));
