@@ -4,6 +4,8 @@ import Homepage from "./pages/homepage";
 import Castepage from "./pages/Castepage";
 import CasteDetails from "./pages/casteDetails";
 import Mixcastes from "./pages/Mixcastes";
+import ReligionPage from "./pages/ReligionPage";
+import ReligionDetails from "./pages/religionDetails";
 
 const routes = createBrowserRouter([
   {
@@ -21,6 +23,16 @@ const routes = createBrowserRouter([
       {
         path: ":casteName/:model",
         element: <CasteDetails />,
+      },
+    ],
+  },
+  {
+    path: "/religion",
+    element: <ReligionPage />,
+    children: [
+      {
+        path: ":casteName/:model",
+        element: <ReligionDetails />,
       },
     ],
   },

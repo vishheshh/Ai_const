@@ -9,7 +9,6 @@ const religionSlice = createSlice({
     setReligionDetails: (state, action) => {
       state.details = action.payload; // Set caste details
       // console.log(state.details)
-      // console.log(state.details)
     },
     clearReligionDetails: (state) => {
       state.details = null; // Clear caste details

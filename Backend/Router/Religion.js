@@ -3,7 +3,7 @@ import ReligionController from "../Controller/Religion.js";
 
 const religionRouter = Router();
 
-religionRouter.get("/get/:religionName", async (req, res) => {
+religionRouter.get("/:religionName", async (req, res) => {
   const { religionName } = req.params;
   console.log(religionName)
   const { offset = 0, limit = 20 } = req.query; // Default offset: 0, limit: 20
