@@ -17,7 +17,7 @@ const CasteCard = ({ religion, name, photo }) => {
     // Dispatch caste details to Redux
     dispatch(setCasteDetails({ name, photo, model, religion }));
 
-    const url = `/castes/${name.toLowerowerCase()}/${encodeURIComponent(model)}`;
+    const url = `/castes/${name.toLowerCase()}/${encodeURIComponent(model)}`;
 
     // Open in a new tab
     // window.open(url, "_blank");
