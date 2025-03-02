@@ -4,7 +4,7 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 function ReligionPage() {
   const religionDetails = useSelector((state) => state.religion.details);
-  console.log(religionDetails);
+  // console.log(religionDetails);
 
   useEffect(() => {
     window.scrollTo(0, 0);

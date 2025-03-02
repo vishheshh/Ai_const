@@ -17,7 +17,7 @@ const CasteCard = ({ religion, name, photo }) => {
     // Dispatch caste details to Redux
     dispatch(setCasteDetails({ name, photo, model, religion }));
 
-    const url = `/castes/${name.toLowerCase()}/${encodeURIComponent(model)}`;
+    const url = `/castes/${name.toLowerowerCase()}/${encodeURIComponent(model)}`;
 
     // Open in a new tab
     // window.open(url, "_blank");
@@ -73,7 +73,7 @@ const CasteCard = ({ religion, name, photo }) => {
           alt=""
           loading="lazy"
         />
-        <figcaption className="absolute bottom-32 left-12 text-xl font-poppins text-gray-600 mb-6 ">GPT-4o English Truth Meter</figcaption>
+        <figcaption className="absolute bottom-32 left-28 text-xl font-poppins text-gray-600 mb-6 ">GPT-4o English</figcaption>
       </div>
 
       {/* Centered Options Box */}
@@ -163,7 +163,7 @@ const CasteCard = ({ religion, name, photo }) => {
                   Sutra
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
-                  Krutrium
+                  Krutrim
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
                   Airavata
