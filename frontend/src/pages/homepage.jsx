@@ -928,7 +928,7 @@ function Homepage() {
     {
       id: 8,
       name: "Rahul K",
-      image: "images/team/rahul.jpg",
+      image: "images/team/rahul.jpeg",
       affiliation: "Researcher AIISC",
       socialMedia: [
         {
