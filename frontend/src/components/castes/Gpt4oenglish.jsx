@@ -86,7 +86,9 @@ function Gpt4oenglish() {
   };
 
     useEffect(() => {
-    const allowedCastes = ["Brahmin", "Siddi"];
+      const allowedCastes = ["Siddi","Shudra","Sutar","Kurmi","Nishad","Kumhar","Dalit","chamar","Khatik","Pasi","Mahishya",
+        "Tanti","Pathan","Attar","Qureshi","Mansoori","Salmani","Kalal","Faqir","Garadi","Pirzada","Khandelwal","Porwal","Shrimal","Upadhyay","Fasli","Balija","Kadmi","Kasar",
+        "Modh","Mehra"];
     if (casteDetails?.name && allowedCastes.includes(casteDetails.name)) {
       const noticeElement = document.getElementById("notice");
       if (noticeElement) {
