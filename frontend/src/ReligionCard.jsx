@@ -79,8 +79,8 @@ const ReligionCard = ({ name, photo }) => {
           alt=""
           loading="lazy"
         />
-        <figcaption className="absolute bottom-32 left-12 text-xl font-poppins text-gray-600 mb-6">
-          GPT-4o English Truth Meter
+        <figcaption className="absolute bottom-32 left-28 text-xl font-poppins text-gray-600 mb-6">
+          GPT-4o English
         </figcaption>
       </div>
 
@@ -165,7 +165,9 @@ const ReligionCard = ({ name, photo }) => {
                   >
                     GPT-4o
                   </li>
-                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp"
+                  onClick={() => handleOptionClick("Sutra-Hindi")}
+                  >
                     Sutra
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">

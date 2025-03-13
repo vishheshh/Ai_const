@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Gpt4oenglish from "../components/religions/Gpt4oenglish";
 import Gpt4ohindi from "../components/religions/Gpt4ohindi";
+import Sutrahindi from "../components/religions/Sutrahindi";
 
 function ReligionDetails() {
   const { name, model } = useParams(); // Get the dynamic parameter
@@ -13,7 +14,7 @@ function ReligionDetails() {
     <div className="w-full h-screen px-2 md:px-10">
       {decodedParam === "GPT-4o-English" && <Gpt4oenglish />}
       {decodedParam === "GPT-4o-Hindi" && <Gpt4ohindi />}
-      {decodedParam === "Sutra-Hindi"}
+      {decodedParam === "Sutra-Hindi" && <Sutrahindi />}
       {decodedParam === "Krutrium-Hindi"}
       {decodedParam === "Airvata-Hindi"}
       {decodedParam === "Llama-3.3-70B-English"}

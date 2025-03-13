@@ -159,7 +159,9 @@ const CasteCard = ({ religion, name, photo }) => {
                   >
                   GPT-4o
                   </li>
-                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
+                  <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp"
+                  onClick={() => handleOptionClick("Sutra-Hindi")}
+                  >
                   Sutra
                   </li>
                   <li className="hover:bg-[#F5F3EF] duration-300 cursor-pointer p-2 mb-1 rounded-lg dp">
