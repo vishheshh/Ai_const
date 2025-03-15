@@ -951,6 +951,19 @@ function Homepage() {
         },
       ],
     },
+    {
+      id: 10,
+      name: "Om Dabral",
+      image: "images/team/om.jpg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https://www.linkedin.com/in/om-dabral-b6a5542b5/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
   ];
 
   const NextArrow = ({ onClick }) => {
