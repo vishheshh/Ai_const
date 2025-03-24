@@ -1187,12 +1187,15 @@ function Homepage() {
             ref={imageRef}
             className="w-full lg:w-2/3 min-h-[300px] lg:min-h-[800px]"
           >
-            <img
-              src="images/statue.png"
-              alt="Lady Justice statue"
-              className="w-full h-full object-cover rounded-2xl lg:rounded-r-none"
+            <iframe
+              className="w-full h-full rounded-2xl lg:rounded-r-none"
+              src=" https://www.youtube.com/embed/J2yEnQIGT54"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
               loading="lazy"
             />
+
           </div>
 
           {/* Text container */}
