@@ -125,10 +125,17 @@ function Sutrahindi() {
             loading="lazy"
           />
         </div>
+        
         <div className="relative flex flex-col w-3/5 mt-4 ">
+          <img
+            src={`/${casteDetails.religion}_castes/${casteDetails.name}_images/${casteDetails.name}_Sutra_truth_meter.png`}
+            className=""
+            alt=""
+            loading="lazy"
+          />
           <div className="absolute bottom-48 right-0 border-4 p-2 rounded-2xl bg-[#F5F3EF]">
             <div className="font-bodoni mb-2 text-center text-xl">
-              Insights Derived from Caste Bias Scores in ChatGPT's Predictions
+              Insights Derived from Caste Bias Scores in Sutra's Predictions
             </div>
             <hr className="border my-2 border-[#B0A695] w-full mx-auto" />
             <div className="hello text-gray-800 font-[400] text-lg">
@@ -147,7 +154,7 @@ function Sutrahindi() {
                   <span>◆</span>
                   <li>
                     Variability across castes highlights the differences in how
-                    ChatGPT predicts or associates particular castes, suggesting
+                    Sutra predicts or associates particular castes, suggesting
                     potential inconsistencies in the underlying data or
                     training.
                   </li>
@@ -245,7 +252,7 @@ function Sutrahindi() {
           </div>
         )}
       </div>
-      <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-10" />
+      {/* <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-10" /> */}
     </div>
   );
 }

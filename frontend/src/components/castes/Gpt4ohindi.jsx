@@ -125,7 +125,14 @@ function Gpt4ohindi() {
             loading="lazy"
           />
         </div>
+        
         <div className="relative flex flex-col w-3/5 mt-4 ">
+          <img
+            src={`/${casteDetails.religion}_castes/${casteDetails.name}_images/${casteDetails.name}_GPT_hindi_truth_meter.png`}
+            className=""
+            alt=""
+            loading="lazy"
+          />
           <div className="absolute bottom-48 right-0 border-4 p-2 rounded-2xl bg-[#F5F3EF]">
             <div className="font-bodoni mb-2 text-center text-xl">
               Insights Derived from Caste Bias Scores in ChatGPT's Predictions
@@ -241,7 +248,7 @@ function Gpt4ohindi() {
           </div>
         )}
       </div>
-      <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-10" />
+      {/* <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto mt-10" /> */}
     </div>
   );
 }
