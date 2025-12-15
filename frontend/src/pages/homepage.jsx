@@ -833,138 +833,138 @@ function Homepage() {
     { id: 6, name: "Jains", image: "images/religion-images/jain.png" },
   ];
 
-  // const PersonData = [
-  //   {
-  //     id: 1,
-  //     name: "Dr. Amitava Das",
-  //     image: "images/team/amitava.png",
-  //     affiliation: "Faculty AIISC@USC",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https:/www.linkedin.com/in/dr-amitava-das-78348022/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Aman Chadha",
-  //     image: "images/team/aman_chadda.jpg",
-  //     affiliation: "Amazon GenAI",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https:/www.linkedin.com/in/amanc/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Vinija Jain",
-  //     image: "images/team/Vinija.jpg",
-  //     affiliation: "Meta",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https:/www.linkedin.com/in/vinija/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Aryan Kasat",
-  //     image: "images/team/aryan.jpeg",
-  //     affiliation: "Researcher AIISC",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https:/www.linkedin.com/in/aryan-kasat-539377211/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 5,
-  //     name: "Kaustubh Kumar",
-  //     image: "images/team/kaustubh.JPG",
-  //     affiliation: "Researcher AIISC",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https:/www.linkedin.com/in/kaustubh-kumar-55930a264/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 6,
-  //     name: "Snehasis M",
-  //     image: "images/team/snehasis.jpeg",
-  //     affiliation: "Researcher AIISC",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https:/www.linkedin.com/in/snehasis-mukhopadhyay-344519252/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 7,
-  //     name: "Vishesh Pandey",
-  //     image: "images/team/vishesh3.jpg",
-  //     affiliation: "Researcher AIISC",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https:/www.linkedin.com/in/vishesh-pandey-b3814b250/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 8,
-  //     name: "Rahul K",
-  //     image: "images/team/rahul.jpeg",
-  //     affiliation: "Researcher AIISC",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https://www.linkedin.com/in/rahul-k--/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 9,
-  //     name: "Shivam Dubey",
-  //     image: "images/team/shivam.jpeg",
-  //     affiliation: "IIT Madras BS",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https://www.linkedin.com/in/syntaxsavant/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 10,
-  //     name: "Om Dabral",
-  //     image: "images/team/om.jpg",
-  //     affiliation: "Researcher AIISC",
-  //     socialMedia: [
-  //       {
-  //         platform: "linkedin",
-  //         link: "https://www.linkedin.com/in/om-dabral-b6a5542b5/",
-  //         image: "images/LinkedIn_icon_circle.png",
-  //       },
-  //     ],
-  //   },
-  // ];
+  const PersonData = [
+    {
+      id: 1,
+      name: "Dr. Amitava Das",
+      image: "images/team/amitava.png",
+      affiliation: "Faculty AIISC@USC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/dr-amitava-das-78348022/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "Aman Chadha",
+      image: "images/team/aman_chadda.jpg",
+      affiliation: "Amazon GenAI",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/amanc/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "Vinija Jain",
+      image: "images/team/Vinija.jpg",
+      affiliation: "Meta",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/vinija/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 4,
+      name: "Aryan Kasat",
+      image: "images/team/aryan.jpeg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/aryan-kasat-539377211/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 5,
+      name: "Kaustubh Kumar",
+      image: "images/team/kaustubh.JPG",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/kaustubh-kumar-55930a264/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 6,
+      name: "Snehasis M",
+      image: "images/team/snehasis.jpeg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/snehasis-mukhopadhyay-344519252/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 7,
+      name: "Vishesh Pandey",
+      image: "images/team/vishesh3.jpg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https:/www.linkedin.com/in/vishesh-pandey-b3814b250/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 8,
+      name: "Rahul K",
+      image: "images/team/rahul.jpeg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https://www.linkedin.com/in/rahul-k--/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 9,
+      name: "Shivam Dubey",
+      image: "images/team/shivam.jpeg",
+      affiliation: "IIT Madras BS",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https://www.linkedin.com/in/syntaxsavant/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+    {
+      id: 10,
+      name: "Om Dabral",
+      image: "images/team/om.jpg",
+      affiliation: "Researcher AIISC",
+      socialMedia: [
+        {
+          platform: "linkedin",
+          link: "https://www.linkedin.com/in/om-dabral-b6a5542b5/",
+          image: "images/LinkedIn_icon_circle.png",
+        },
+      ],
+    },
+  ];
 
   const NextArrow = ({ onClick }) => {
     return (
