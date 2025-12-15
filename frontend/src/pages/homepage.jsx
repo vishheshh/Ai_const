@@ -1886,7 +1886,8 @@ function Homepage() {
         </div>
       </div>
 
-      {/* <div id="team" className="w-full mx-auto mt-24 h-auto">
+      {/* 
+      <div id="team" className="w-full mx-auto mt-24 h-auto">
         <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-3 ">
           <div className="mx-auto font-bodoni w-fit px-4 bg-[#F5F3EF] text-[#776B5D] rounded-xl dp mb-5">
             Team
@@ -1906,7 +1907,8 @@ function Homepage() {
             ))}
           </div>
         </div>
-      </div> */}
+      </div> 
+    */}
 
       <div className="w-3/4 h-[600px] mx-auto mt-9 flex">
         <div className="w-1/2 text-4xl flex justify-center items-center relative group">
