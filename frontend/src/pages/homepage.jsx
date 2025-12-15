@@ -1886,29 +1886,7 @@ function Homepage() {
         </div>
       </div>
 
-      {/* 
-      <div id="team" className="w-full mx-auto mt-24 h-auto">
-        <div className="w-full text-white hello text-6xl leading-relaxed flex flex-col justify-center tracking-wider p-3 ">
-          <div className="mx-auto font-bodoni w-fit px-4 bg-[#F5F3EF] text-[#776B5D] rounded-xl dp mb-5">
-            Team
-          </div>
-          <hr className="border mb-6 border-[#B0A695] w-3/4 mx-auto" />
-
-          <div className="flex flex-wrap justify-center gap-12 p-6 ">
-            {/* Map over the data to display ReligionCards */}
-            {PersonData.map((person) => (
-              <PersonCard
-                key={person.id}
-                image={person.image}
-                personName={person.name}
-                socialMedia={person.socialMedia}
-                affiliation={person.affiliation}
-              />
-            ))}
-          </div>
-        </div>
-      </div> 
-    */}
+      
 
       <div className="w-3/4 h-[600px] mx-auto mt-9 flex">
         <div className="w-1/2 text-4xl flex justify-center items-center relative group">
